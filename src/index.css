@@ -1,1 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --font-cinzel: 'Cinzel', serif;
+    --font-crimson: 'Crimson Pro', serif;
+    --color-verde-claro: #FFF9E5;
+    --color-verde: #355017;
+    --color-verde-escuro: #192C07;
+    --color-preto: #0D0A0B;
+    --color-branco: #F3F3F3;
+}

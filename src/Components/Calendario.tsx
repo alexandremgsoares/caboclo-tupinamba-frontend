@@ -1,30 +1,23 @@
+import CalendarIconWithDate from "./CalendarDate";
+import { giras } from "./giras";
+
 function Calendario() {
   return (
-    <section className="flex flex-row items-center px-4 py-16 gap-14 max-w-[1400px] mx-auto text-branco">
-      <div className="max-w-1/2">
-        <h1 className="font-bold text-5xl">Nossa história.</h1>
-        <p className="mt-4 text-2xl">
-          {" "}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper
-          nibh a sem tempus, a rhoncus ex laoreet. Vestibulum luctus magna a
-          aliquet sodales. Morbi eget ultrices orci. Donec scelerisque lorem
-          libero, nec mollis magna tincidunt tincidunt. In aliquet congue
-          tincidunt. In hac habitasse platea dictumst. Phasellus mattis dictum
-          ex. Ut id molestie velit. Nunc sed diam enim. Aenean placerat
-          vulputate accumsan. Cras nec mauris purus. Suspendisse a lorem tortor.
-          Vestibulum vulputate sapien est, non dignissim quam ornare in.
-          Suspendisse ipsum dolor, luctus eget hendrerit vitae, convallis sit
-          amet quam. Integer quis ex magna. Aliquam quam enim, ultricies at
-          nulla vel, interdum egestas sem. Nullam mollis nisi quis feugiat
-          tristique. Nullam at tristique arcu.{" "}
-        </p>
-      </div>
-      <img
-        className="w-full max-w-md md:max-w-none md:w-1/2 h-auto object-cover rounded-lg"
-        src="../src/assets/altar.webp"
-        alt="foto do nosso altar"
-      />
-    </section>
+    <div className="flex flex-col gap-4">
+      {giras.map((gira, index) => (
+        <div
+          key={index}
+          className="flex flex-row items-center gap-4 border-2 rounded-[10px] border-verde pr-2">
+          <CalendarIconWithDate day={gira.day} month={gira.month} />
+          <div>
+            <p className="text-branco text-xl">{gira.titulo}</p>
+            <p className="text-branco/80">
+              19:30 - {gira.day} de {gira.monthFull} de 2025
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }
 

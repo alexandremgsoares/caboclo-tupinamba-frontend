@@ -2,19 +2,25 @@ import { LocationPin } from "@mui/icons-material";
 
 function Footer() {
   return (
-    <footer className="p-16 bg-verde-claro font-crimson text-xl text-verde-escuro ">
-      <div className="flex max-w-7xl mx-auto justify-between gap-8">
+    <footer className="p-4 bg-verde-claro font-crimson text-xl text-verde-escuro ">
+      <div className="flex flex-col md:flex-row max-w-7xl mx-auto justify-between gap-8">
         <div className="flex flex-col gap-8">
           <img
             className="h-[100px]"
             src="../src/assets/tupinamba-logo-horizontal.svg"
             alt=""
           />
-          <div className="flex gap-20">
+          <div className="flex gap-16">
             <ul>
-              <li className="font-bold">Início do Site</li>
-              <li>Nossa História</li>
-              <li>Nossa Agenda</li>
+              <li className="font-bold">
+                <a href="/">Início do Site</a>
+              </li>
+              <li>
+                <a href="/#centro">Nossa História</a>
+              </li>
+              <li>
+                <a href="/calendario">Nossa Agenda</a>
+              </li>
             </ul>
             <ul>
               <li className="font-bold">Conheça Umbanda</li>
@@ -26,7 +32,7 @@ function Footer() {
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <div className="flex gap-8">
+          <div className="flex flex-col md:flex-row gap-8">
             <div>
               <h3 className="font-bold">Onde nos encontrar?</h3>
               <p>Rua “C”, 310, Bairro Eldorado, Unaí, Minas Gerais.</p>
@@ -48,7 +54,7 @@ function Footer() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-full rounded-lg shadow-md"></iframe>
+            className="w-full md:min-h-[350px] h-full rounded-lg shadow-md"></iframe>
         </div>
       </div>
     </footer>

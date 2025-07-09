@@ -2,7 +2,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Hero from "../Components/Hero";
 import Historia from "../Components/Historia";
-import Calendario from "../Components/Calendario";
+import Agenda from "../Components/Agenda";
 
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
       <main className="flex-1 bg-verde-escuro">
         <Hero />
         <Historia />
-        <Calendario />
+        <Agenda />
       </main>
       <Footer />
     </div>

@@ -1,9 +1,11 @@
 function Historia() {
   return (
-    <section className="flex flex-row items-center px-4 py-16 gap-14 max-w-[1400px] mx-auto text-branco">
-      <div className="max-w-1/2">
+    <section
+      id="centro"
+      className="flex flex-col md:flex-row items-center px-4 py-8 gap-8 max-w-[1400px] mx-auto text-branco">
+      <div className="md:w-1/2 w-full">
         <h1 className="font-bold text-5xl">Nossa história.</h1>
-        <p className="mt-4 text-2xl">
+        <p className="mt-4 text-xl">
           {" "}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper
           nibh a sem tempus, a rhoncus ex laoreet. Vestibulum luctus magna a

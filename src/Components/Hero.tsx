@@ -1,6 +1,7 @@
 import { LocationPin } from "@mui/icons-material";
 import { giras } from "./giras";
 import type { Gira } from "./giras";
+// import heroBg from "../assets/bg-hero.webp";
 
 function getNextGira(currentDate: Date, giras: Gira[]): Gira | null {
   const monthMap: Record<string, number> = {
@@ -53,7 +54,7 @@ function Hero() {
     <section>
       <div className="relative w-full items-center h-[80vh] md:h-[80vh]">
         <img
-          src="../src/assets/bg-hero.webp"
+          src="/bg-hero.webp"
           alt="Entrada do Centro Espiritualista"
           className="absolute inset-0 w-full h-full md:h-full object-cover"
         />

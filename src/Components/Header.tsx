@@ -2,6 +2,7 @@ import { Menu } from "@mui/icons-material";
 import { Close } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
+// import logo from "/tupinamba-logo-horizontal.svg";
 
 function Header() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -22,12 +23,11 @@ function Header() {
         <a href="/">
           <img
             className="h-12"
-            src="../src/assets/tupinamba-logo-horizontal.svg"
+            src={"/tupinamba-logo-horizontal.svg"}
             alt="logo do centro tupinambá"
           />
         </a>
 
-        {/* Mobile Menu Toggle */}
         {isMobile ? (
           <div className="relative">
             <button

@@ -7,7 +7,7 @@ export interface Gira {
 
 export const giras: Array<Gira> = [
   {
-    titulo: "Aniversário de 1 Ano do centro",
+    titulo: "Aniversário de 1 Ano do Centro",
     day: 1,
     month: "JUL",
     monthFull: "Julho",

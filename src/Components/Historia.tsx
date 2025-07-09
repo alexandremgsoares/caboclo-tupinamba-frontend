@@ -1,3 +1,4 @@
+// import altar from "../assets/altar.webp";
 function Historia() {
   return (
     <section
@@ -23,7 +24,7 @@ function Historia() {
       </div>
       <img
         className="w-full max-w-md md:max-w-none md:w-1/2 h-auto object-cover rounded-lg"
-        src="../src/assets/altar.webp"
+        src="/altar.webp"
         alt="foto do nosso altar"
       />
     </section>

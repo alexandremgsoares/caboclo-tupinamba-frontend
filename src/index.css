@@ -10,3 +10,7 @@
     --color-preto: #0D0A0B;
     --color-branco: #F3F3F3;
 }
+
+:root{
+    scroll-behavior: smooth;
+}

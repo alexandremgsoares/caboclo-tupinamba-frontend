@@ -1,69 +1,41 @@
-# React + TypeScript + Vite
+# Centro Espiritualista Caboclo Tupinambá - SPA de uma página institucional com funcionalidade PWA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o site oficial do Centro Espiritualista Caboclo Tupinambá, desenvolvido com o objetivo de informar, acolher e aproximar pessoas da instituição. O projeto apresenta a história do centro, agenda de atendimentos, galeria de fotos, orientações para visitantes e conteúdos educativos sobre a religião.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack - Tecnologias utilizadas
 
-## Expanding the ESLint configuration
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Router](https://reactrouter.com/)
+- [PWA Support](https://vite-pwa-org.netlify.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Funcionalidades
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Página inicial com mensagem de boas-vindas e chamada à visita
+- Agenda de eventos e atendimentos atualizável
+- Galeria de fotos do centro e celebrações
+- Informações sobre a Umbanda e a linha espiritual da casa
+- Design responsivo e acessível
+- API RESTful customizada em Node.js e Express
+- Instalação como PWA
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Estrutura de diretórios
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+caboclo-tupinamba/
+├── frontend/
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── router/
+│ │ ├── App.tsx
+│ │ └── main.tsx
+├── backend/
+│ ├── routes/
+│ ├── controllers/
+│ ├── services/
+│ ├── index.ts
+│ └── .env

@@ -1,12 +1,11 @@
 import { Route, Routes } from "react-router";
 import Home from "../Pages/Home";
-import Umbanda from "../Pages/Umbanda";
-
+import UmbandaLayout from "../Pages/UmbandaLayout";
 export const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/Umbanda" element={<Umbanda />} />
+      <Route index element={<Home />} />
+      <Route path="/umbanda" element={<UmbandaLayout />} />
     </Routes>
   );
 };

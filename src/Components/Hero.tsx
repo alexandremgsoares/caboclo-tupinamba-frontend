@@ -68,7 +68,7 @@ function Hero() {
           <div className="flex flex-col items-center gap-4 mt-8">
             <p className="inline-block px-3 py-1.5 bg-verde-claro rounded-xl text-verde-escuro text-2xl">
               {nextGira
-                ? `Nosso próximo passe será dia : ${String(
+                ? `Nossa próxima gira será dia : ${String(
                     nextGira.day
                   ).padStart(2, "0")}/${monthNumberMap[nextGira.month]}/2025`
                 : "O calendário do próximo mês será divulgado em breve."}

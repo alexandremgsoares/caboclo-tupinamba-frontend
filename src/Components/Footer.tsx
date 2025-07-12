@@ -20,7 +20,7 @@ function Footer() {
                 <a href="/#centro">Nossa História</a>
               </li>
               <li>
-                <a href="/calendario">Nossa Agenda</a>
+                <a href="/#calendario">Nossa Agenda</a>
               </li>
             </ul>
             <ul>

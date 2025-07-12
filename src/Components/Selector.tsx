@@ -5,7 +5,7 @@ interface SelectorProps {
   onClick?: () => void;
 }
 
-function Selector({ children, icon: Icon, active, onClick }: SelectorProps) {
+function Selector({ children, icon: Icon, onClick, active }: SelectorProps) {
   return (
     <div
       onClick={onClick}

@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { MenuBook, LibraryMusic, Person } from "@mui/icons-material";
 import Selector from "./Selector";
+import HistoriaDaUmbanda from "./HistoriaDaUmbanda";
+import PontosEOracoes from "./PontosEOracoes";
+import Entidades from "./Entidades";
 
 function TabSelector() {
   const [isActiveTab, setIsActiveTab] = useState(0);
 
   return (
     <>
-      <div className="bg-verde-claro-2 flex flex-row max-w-7xl p-2 gap-2 md:justify-center overflow-scroll">
+      <div className="bg-verde-claro-2 flex flex-row p-2 gap-2 md:justify-center overflow-scroll">
         <Selector
           icon={MenuBook}
           active={isActiveTab === 0}
@@ -29,12 +32,10 @@ function TabSelector() {
           <p>Entidades</p>
         </Selector>
       </div>
-
-      {/* Conteúdo da aba ativa */}
       <div className="p-4 text-center text-xl text-branco">
-        {isActiveTab === 0 && <p>Conteúdo da história do centro.</p>}
-        {isActiveTab === 1 && <p>Lista de pontos cantados e orações.</p>}
-        {isActiveTab === 2 && <p>Informações sobre as entidades.</p>}
+        {isActiveTab === 0 && <HistoriaDaUmbanda />}
+        {isActiveTab === 1 && <PontosEOracoes />}
+        {isActiveTab === 2 && <Entidades />}
       </div>
     </>
   );

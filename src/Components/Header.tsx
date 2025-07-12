@@ -60,7 +60,7 @@ function Header() {
           </div>
         ) : (
           <nav>
-            <ul className="flex items-center gap-6">
+            <ul className="flex items-center gap-4">
               <li>
                 <a href="/#centro">O centro</a>
               </li>

@@ -22,7 +22,7 @@ function Header() {
       <div className="flex items-center justify-between max-w-7xl mx-auto px-4 py-2">
         <a href="/">
           <img
-            className="h-12"
+            className="md:h-16 h-14"
             src={"/tupinamba-logo-horizontal.svg"}
             alt="logo do centro tupinambá"
           />
@@ -37,13 +37,13 @@ function Header() {
             </button>
 
             {isMenuOpen && (
-              <ul className="absolute right-0  mt-4 bg-verde-claro text-verde-escuro flex flex-col gap-4 p-4 shadow-lg z-50 text-nowrap">
-                <li>
+              <ul className="absolute right-0 mt-4 bg-verde-claro text-verde-escuro flex flex-col gap-4 p-4 shadow-lg z-50 text-nowrap">
+                <li className="border rounded-lg py-2 px-4">
                   <a href="/#centro" onClick={() => setIsMenuOpen(false)}>
                     O centro
                   </a>
                 </li>
-                <li>
+                <li className="border rounded-lg py-2 px-4">
                   <NavLink to="/Umbanda" onClick={() => setIsMenuOpen(false)}>
                     A Umbanda
                   </NavLink>

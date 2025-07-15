@@ -20,22 +20,15 @@ Este é o site oficial do Centro Espiritualista Caboclo Tupinambá, desenvolvido
 - Galeria de fotos do centro e celebrações
 - Informações sobre a Umbanda e a linha espiritual da casa
 - Design responsivo e acessível
-- API RESTful customizada em Node.js e Express
 - Instalação como PWA
 
 ## Estrutura de diretórios
 
 caboclo-tupinamba/
-├── frontend/
-│ ├── src/
-│ │ ├── components/
+
+├── src/
+│ ├── components/
 │ │ ├── pages/
-│ │ ├── router/
-│ │ ├── App.tsx
-│ │ └── main.tsx
-├── backend/
-│ ├── routes/
-│ ├── controllers/
-│ ├── services/
-│ ├── index.ts
-│ └── .env
+│ ├── router/
+│ ├── App.tsx
+│ └── main.tsx

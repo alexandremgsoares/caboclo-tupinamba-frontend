@@ -2,15 +2,15 @@ import { Menu } from "@mui/icons-material";
 import { Close } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
-// import logo from "/tupinamba-logo-horizontal.svg";
+import logo from "/tupinamba-logo-horizontal.svg";
 
 function Header() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 800);
     };
 
     window.addEventListener("resize", handleResize);
@@ -19,11 +19,11 @@ function Header() {
 
   return (
     <header className="bg-verde-claro shadow-md text-verde-escuro font-cinzel text-[18px] sticky top-0 z-50">
-      <div className="flex items-center justify-between max-w-7xl mx-auto px-4 py-2">
+      <div className="flex items-center justify-between max-w-7xl mx-auto px-4 py-2 gap-2 md:text-[18px]">
         <a href="/">
           <img
             className="md:h-16 h-14"
-            src={"/tupinamba-logo-horizontal.svg"}
+            src={logo}
             alt="logo do centro tupinambá"
           />
         </a>
@@ -44,7 +44,7 @@ function Header() {
                   </a>
                 </li>
                 <li className="border rounded-lg py-2 px-4">
-                  <NavLink to="/Umbanda" onClick={() => setIsMenuOpen(false)}>
+                  <NavLink to="/historia" onClick={() => setIsMenuOpen(false)}>
                     A Umbanda
                   </NavLink>
                 </li>
@@ -65,7 +65,7 @@ function Header() {
                 <a href="/#centro">O centro</a>
               </li>
               <li>
-                <NavLink to="/Umbanda">A Umbanda</NavLink>
+                <NavLink to="/historia">A Umbanda</NavLink>
               </li>
               <li>
                 <a

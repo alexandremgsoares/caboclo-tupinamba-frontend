@@ -1,16 +1,12 @@
 import { LocationPin } from "@mui/icons-material";
-// import logo from "../assets/tupinamba-logo-horizontal.svg";
+import logo from "/tupinamba-logo-horizontal.svg";
 
 function Footer() {
   return (
     <footer className="p-4 bg-verde-claro font-crimson text-xl text-verde-escuro ">
       <div className="flex flex-col md:flex-row max-w-7xl mx-auto justify-between gap-8">
         <div className="flex flex-col gap-8">
-          <img
-            className="h-[100px]"
-            src="/tupinamba-logo-horizontal.svg"
-            alt=""
-          />
+          <img className="h-[100px]" src={logo} alt="" />
           <div className="flex gap-16">
             <ul>
               <li className="font-bold">
@@ -41,7 +37,8 @@ function Footer() {
             <div>
               <a
                 className="inline-flex items-center gap-2 py-2.5 px-4 rounded-lg bg-verde-escuro text-verde-claro text-nowrap"
-                href="https://maps.app.goo.gl/3u36hYXEZQSNtV2p6">
+                href="https://maps.app.goo.gl/3u36hYXEZQSNtV2p6"
+                target="_blank">
                 <LocationPin /> Abrir no mapa
               </a>
             </div>

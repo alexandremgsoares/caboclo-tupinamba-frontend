@@ -1,12 +1,13 @@
 import Calendario from "./Calendario";
-function Agenda() {
+import { type Gira } from "../Pages/Home";
+function Agenda({ giras }: { giras: Gira[] }) {
   return (
     <section id="calendario" className="flex flex-col mx-auto gap-10 py-16">
       <h1 className="font-bold text-6xl text-center text-branco">
         Confira a nossa agenda{" "}
       </h1>
       <div className="flex flex-col md:flex-row justify-center mx-auto gap-14 px-4">
-        <Calendario></Calendario>
+        <Calendario giras={giras}></Calendario>
         <div className="flex md:max-w-1/3 text-2xl gap-4 text-branco">
           {/* <h3 className="text-4xl text-center">Orientações</h3> */}
           <ul className="list-disc pl-6 text-xl text-branco/90 flex flex-col gap-4">

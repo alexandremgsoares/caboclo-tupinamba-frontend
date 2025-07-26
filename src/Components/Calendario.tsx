@@ -1,22 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import CalendarIconWithDate from "./CalendarDate";
 import { NavigateNext, NavigateBefore } from "@mui/icons-material";
+import type { Gira } from "../Pages/Home";
 
 type Mes = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
-export interface Gira {
-  titulo: string;
-  day: number;
-  month: string;
-  year: number;
-  monthIndex: number;
-}
 
-function Calendario() {
+
+function Calendario( giras: { giras: Gira[] }) {
   const [mesAtual, setMesAtual] = useState<Mes>(
     (new Date().getMonth() + 1) as Mes
   );
-  const [giras, setGiras] = useState<Gira[]>([]);
 
   const meses: string[] = [
     "",
@@ -34,7 +28,7 @@ function Calendario() {
     "Dezembro",
   ];
 
-  const girasDoMes = giras.filter((gira) => gira.monthIndex === mesAtual);
+  const girasDoMes = giras.giras.filter((gira) => gira.monthIndex === mesAtual);
 
   function handleNextMonth(): void {
     setMesAtual((prev) => (prev === 12 ? 1 : prev + 1) as Mes);
@@ -44,12 +38,6 @@ function Calendario() {
     setMesAtual((prev) => (prev === 1 ? 12 : prev - 1) as Mes);
   }
 
-   useEffect(() => {
-    fetch('https://caboclo-tupinamba.onrender.com/giras')
-      .then((res) => res.json())
-      .then((data) => setGiras(data))
-      .catch((err) => console.error('Erro ao buscar giras:', err));
-  }, []);
 
   return (
     <div className="flex flex-col gap-4">

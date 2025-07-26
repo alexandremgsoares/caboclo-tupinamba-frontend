@@ -1,5 +1,6 @@
 import Calendario from "./Calendario";
 import { type Gira } from "../Pages/Home";
+
 function Agenda({ giras }: { giras: Gira[] }) {
   return (
     <section id="calendario" className="flex flex-col mx-auto gap-10 py-16">

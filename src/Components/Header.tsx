@@ -7,6 +7,8 @@ import logo from "/tupinamba-logo-horizontal.svg";
 function Header() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [isInstallable, setIsInstallable] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -16,6 +18,41 @@ function Header() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e: any) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      setIsInstallable(true);
+    };
+
+    const handleAppInstalled = () => {
+      setDeferredPrompt(null);
+      setIsInstallable(false);
+    };
+
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+    window.addEventListener("appinstalled", handleAppInstalled);
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js");
+    }
+
+    return () => {
+      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+      window.removeEventListener("appinstalled", handleAppInstalled);
+    };
+  }, []);
+
+  const handleInstallClick = () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(() => {
+        setDeferredPrompt(null);
+        setIsInstallable(false);
+      });
+    }
+  };
 
   return (
     <header className="bg-verde-claro shadow-md text-verde-escuro font-cinzel text-[18px] sticky top-0 z-50">
@@ -37,7 +74,7 @@ function Header() {
             </button>
 
             {isMenuOpen && (
-              <ul className="absolute right-0 mt-4 bg-verde-claro text-verde-escuro flex flex-col gap-4 p-4 shadow-lg z-50 text-nowrap">
+              <ul className="absolute right-0 mt-4 bg-verde-claro text-verde-escuro flex flex-col gap-4 p-6 shadow-lg z-50 text-nowrap rounded-lg">
                 <li className="border rounded-lg py-2 px-4">
                   <a href="/#centro" onClick={() => setIsMenuOpen(false)}>
                     O centro
@@ -48,13 +85,18 @@ function Header() {
                     A Umbanda
                   </NavLink>
                 </li>
-                <li>
-                  <a
-                    className="py-2 px-4 rounded-lg bg-verde-escuro text-verde-claro"
-                    href="/#calendario">
-                    Nossa Agenda
-                  </a>
+                <li className="py-2 px-4 rounded-lg border">
+                  <a href="/#calendario">Nossa Agenda</a>
                 </li>
+                {isInstallable && (
+                  <li>
+                    <button
+                      onClick={handleInstallClick}
+                      className="py-2 px-4 rounded-lg bg-verde-escuro text-verde-claro w-full text-left">
+                      Salvar página no celular
+                    </button>
+                  </li>
+                )}
               </ul>
             )}
           </div>

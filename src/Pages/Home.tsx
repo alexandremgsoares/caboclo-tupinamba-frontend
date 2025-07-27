@@ -3,7 +3,7 @@ import Footer from "../Components/Footer";
 import Hero from "../Components/Hero";
 import Historia from "../Components/Historia";
 import Agenda from "../Components/Agenda";
-import { useEffect, useState } from "react";
+import { giras } from "../../public/giras";
 
 export type Gira = {
   titulo: string;
@@ -14,15 +14,6 @@ export type Gira = {
 };
 
 function Home() {
-  const [giras, setGiras] = useState<Gira[]>([]);
-
-useEffect(() => {
-    fetch('https://caboclo-tupinamba.onrender.com/giras')
-      .then((res) => res.json())
-      .then((data) => setGiras(data))
-      .catch((err) => console.error('Erro ao buscar giras:', err));
-  }, []);
-  
   return (
     <div className="flex flex-col min-h-screen">
       <Header />

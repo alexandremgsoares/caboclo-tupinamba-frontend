@@ -5,9 +5,7 @@ import type { Gira } from "../Pages/Home";
 
 type Mes = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
-
-
-function Calendario( giras: { giras: Gira[] }) {
+function Calendario(giras: { giras: Gira[] }) {
   const [mesAtual, setMesAtual] = useState<Mes>(
     (new Date().getMonth() + 1) as Mes
   );
@@ -38,7 +36,6 @@ function Calendario( giras: { giras: Gira[] }) {
     setMesAtual((prev) => (prev === 1 ? 12 : prev - 1) as Mes);
   }
 
-
   return (
     <div className="flex flex-col gap-4">
       <div className="flex justify-between items-center text-branco text-2xl">
@@ -55,7 +52,7 @@ function Calendario( giras: { giras: Gira[] }) {
             }}
           />
         </button>
-        <h2>{meses[mesAtual]}</h2>
+        <h2>{meses[mesAtual]} 2025</h2>
         <button onClick={handleNextMonth}>
           <NavigateNext
             sx={{

@@ -1,6 +1,6 @@
 import { LocationPin } from "@mui/icons-material";
 import heroBg from "/bg-hero.webp";
-import { type Gira } from "../Pages/Home";
+import type { Gira } from "../../public/giras";
 
 function getProximaGira(currentDate: Date, giras: Gira[]): Gira | null {
   const sorted = [...giras].sort((a, b) => {
@@ -19,7 +19,7 @@ function getProximaGira(currentDate: Date, giras: Gira[]): Gira | null {
   return null;
 }
 
-function Hero({giras}: { giras: Gira[] }) {
+function Hero({ giras }: { giras: Gira[] }) {
   const today = new Date();
   const nextGira = getProximaGira(today, giras);
 

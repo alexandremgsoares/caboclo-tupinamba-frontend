@@ -8,7 +8,7 @@ import logo from "/tupinamba-logo-horizontal.svg";
 interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
   readonly userChoice: Promise<{
-    outcome: 'accepted' | 'dismissed';
+    outcome: "accepted" | "dismissed";
     platform: string;
   }>;
   prompt(): Promise<void>;
@@ -17,17 +17,18 @@ interface BeforeInstallPromptEvent extends Event {
 function Header() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [isInstallable, setIsInstallable] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] =
+    useState<BeforeInstallPromptEvent | null>(null);
+  const [isInstallable, setIsInstallable] = useState(true);
 
   useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      const wb = new Workbox('/sw.js');
-      
-      wb.addEventListener('installed', (event) => {
+    if ("serviceWorker" in navigator) {
+      const wb = new Workbox("/sw.js");
+
+      wb.addEventListener("installed", (event) => {
         console.log("SW registrado:", event);
       });
-      
+
       wb.register().catch((error) => {
         console.log("Erro SW:", error);
       });

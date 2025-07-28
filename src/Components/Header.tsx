@@ -21,12 +21,14 @@ function Header() {
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (e: any) => {
+      console.log("beforeinstallprompt disparado", e);
       e.preventDefault();
       setDeferredPrompt(e);
       setIsInstallable(true);
     };
 
     const handleAppInstalled = () => {
+      console.log("App instalado");
       setDeferredPrompt(null);
       setIsInstallable(false);
     };
@@ -35,22 +37,45 @@ function Header() {
     window.addEventListener("appinstalled", handleAppInstalled);
 
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js");
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then(() => console.log("SW registrado"))
+        .catch((err) => console.log("Erro SW:", err));
+    }
+
+    // Fallback para iOS Safari
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const isStandalone = window.matchMedia(
+      "(display-mode: standalone)"
+    ).matches;
+
+    if (isIOS && !isStandalone) {
+      setIsInstallable(true);
+      console.log("iOS detectado, mostrando botão PWA");
     }
 
     return () => {
-      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt
+      );
       window.removeEventListener("appinstalled", handleAppInstalled);
     };
   }, []);
 
   const handleInstallClick = () => {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
     if (deferredPrompt) {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then(() => {
         setDeferredPrompt(null);
         setIsInstallable(false);
       });
+    } else if (isIOS) {
+      alert(
+        'Para instalar: toque em "Compartilhar" e depois "Adicionar à Tela de Início"'
+      );
     }
   };
 

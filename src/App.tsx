@@ -15,7 +15,7 @@ function App() {
             <Route index element={<Navigate to="historia" replace />} />
             <Route path="historia" element={<HistoriaDaUmbanda />} />
             <Route path="pontos" element={<PontosEOracoes />} />
-            <Route path="Entidades" element={<Entidades />} />
+            <Route path="entidades" element={<Entidades />} />
           </Route>
         </Routes>
       </BrowserRouter>

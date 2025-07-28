@@ -2,13 +2,23 @@ import { Menu } from "@mui/icons-material";
 import { Close } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
+import { useRegisterSW } from "pwa-register/react";
 import logo from "/tupinamba-logo-horizontal.svg";
 
 function Header() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
-  const [isInstallable, setIsInstallable] = useState(true);
+  const [isInstallable, setIsInstallable] = useState(false);
+
+  useRegisterSW({
+    onRegistered(r) {
+      console.log("SW registrado:", r);
+    },
+    onRegisterError(error) {
+      console.log("Erro SW:", error);
+    },
+  });
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,13 +45,6 @@ function Header() {
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     window.addEventListener("appinstalled", handleAppInstalled);
-
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then(() => console.log("SW registrado"))
-        .catch((err) => console.log("Erro SW:", err));
-    }
 
     // Fallback para iOS Safari
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);

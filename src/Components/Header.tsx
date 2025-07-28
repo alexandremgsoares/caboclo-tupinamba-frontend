@@ -2,23 +2,37 @@ import { Menu } from "@mui/icons-material";
 import { Close } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
-import { useRegisterSW } from "pwa-register/react";
+import { Workbox } from "workbox-window";
 import logo from "/tupinamba-logo-horizontal.svg";
+
+interface BeforeInstallPromptEvent extends Event {
+  readonly platforms: string[];
+  readonly userChoice: Promise<{
+    outcome: 'accepted' | 'dismissed';
+    platform: string;
+  }>;
+  prompt(): Promise<void>;
+}
 
 function Header() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [isInstallable, setIsInstallable] = useState(false);
 
-  useRegisterSW({
-    onRegistered(r) {
-      console.log("SW registrado:", r);
-    },
-    onRegisterError(error) {
-      console.log("Erro SW:", error);
-    },
-  });
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      const wb = new Workbox('/sw.js');
+      
+      wb.addEventListener('installed', (event) => {
+        console.log("SW registrado:", event);
+      });
+      
+      wb.register().catch((error) => {
+        console.log("Erro SW:", error);
+      });
+    }
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,10 +44,11 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    const handleBeforeInstallPrompt = (e: any) => {
+    const handleBeforeInstallPrompt = (e: Event) => {
       console.log("beforeinstallprompt disparado", e);
       e.preventDefault();
-      setDeferredPrompt(e);
+      const event = e as BeforeInstallPromptEvent;
+      setDeferredPrompt(event);
       setIsInstallable(true);
     };
 

@@ -19,7 +19,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [deferredPrompt, setDeferredPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
-  const [isInstallable, setIsInstallable] = useState(true);
+  const [isInstallable, setIsInstallable] = useState(false);
 
   useEffect(() => {
     if ("serviceWorker" in navigator) {
@@ -62,12 +62,19 @@ function Header() {
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     window.addEventListener("appinstalled", handleAppInstalled);
 
-    // Fallback para iOS Safari
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    // Verificar se já está instalado
     const isStandalone = window.matchMedia(
       "(display-mode: standalone)"
     ).matches;
+    
+    if (isStandalone) {
+      setIsInstallable(false);
+      console.log("App já está instalado");
+      return;
+    }
 
+    // Fallback para iOS Safari
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
     if (isIOS && !isStandalone) {
       setIsInstallable(true);
       console.log("iOS detectado, mostrando botão PWA");
@@ -136,7 +143,7 @@ function Header() {
                   <li>
                     <button
                       onClick={handleInstallClick}
-                      className="py-2 px-4 rounded-lg bg-verde-escuro text-verde-claro w-full text-left">
+                      className="py-2 px-4 rounded-lg bg-verde-escuro text-verde-claro w-full text-left touch-manipulation cursor-pointer active:scale-95 transition-transform">
                       Salvar página no celular
                     </button>
                   </li>

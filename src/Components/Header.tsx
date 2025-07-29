@@ -66,7 +66,7 @@ function Header() {
     const isStandalone = window.matchMedia(
       "(display-mode: standalone)"
     ).matches;
-    
+
     if (isStandalone) {
       setIsInstallable(false);
       console.log("App já está instalado");
@@ -136,7 +136,7 @@ function Header() {
                     A Umbanda
                   </NavLink>
                 </li>
-                <li className="py-2 px-4 rounded-lg border">
+                <li className="py-2 px-4  bg-verde-escuro text-verde-claro rounded-lg border">
                   <a href="/#calendario">Nossa Agenda</a>
                 </li>
                 {isInstallable && (

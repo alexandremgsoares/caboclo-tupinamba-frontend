@@ -1,13 +1,15 @@
 import { LocationPin } from "@mui/icons-material";
 import logo from "/tupinamba-logo-horizontal.svg";
+import EmailCopy from "./EmailCopy";
 
 function Footer() {
   return (
     <footer className="p-4 bg-verde-claro font-crimson text-xl text-verde-escuro ">
-      <div className="flex flex-col md:flex-row max-w-7xl mx-auto justify-between gap-8">
+      <div className="flex flex-col md:flex-row max-w-7xl mx-auto gap-8">
+        {/* Left Column */}
         <div className="flex flex-col gap-8">
           <img className="h-[100px]" src={logo} alt="" />
-          <div className="flex gap-16">
+          <div className="flex gap-12">
             <ul>
               <li className="font-bold">
                 <a href="/">Início do Site</a>
@@ -27,21 +29,31 @@ function Footer() {
               <li>Banhos e suas utilidades</li>
             </ul>
           </div>
+          <div className="flex flex-col gap-2 mt-3">
+            <p className="font-medium">
+              Clique no link abaixo e faça sua doação pelo nosso pix.
+            </p>
+            <EmailCopy
+              email="caboclotupinamba2024@gmail.com"
+              displayText="Sua doação é muito importante."
+              className="text-lg max-w-fit gap-2"
+            />
+          </div>
         </div>
-        <div className="flex flex-col gap-2">
-          <div className="flex flex-col md:flex-row gap-8">
-            <div>
-              <h3 className="font-bold">Onde nos encontrar?</h3>
-              <p>Rua “C”, 310, Bairro Eldorado, Unaí, Minas Gerais.</p>
-            </div>
-            <div>
-              <a
-                className="inline-flex items-center gap-2 py-2.5 px-4 rounded-lg bg-verde-escuro text-verde-claro text-nowrap"
-                href="https://maps.app.goo.gl/3u36hYXEZQSNtV2p6"
-                target="_blank">
-                <LocationPin /> Abrir no mapa
-              </a>
-            </div>
+
+        {/* Right Column */}
+        <div className="flex flex-col gap-4">
+          <div>
+            <h3 className="font-bold">Onde nos encontrar?</h3>
+            <p>Rua "C", 310, Bairro Eldorado, Unaí, Minas Gerais.</p>
+          </div>
+          <div>
+            <a
+              className="inline-flex items-center gap-2 py-2.5 px-4 rounded-lg bg-verde-escuro text-verde-claro text-nowrap"
+              href="https://maps.app.goo.gl/3u36hYXEZQSNtV2p6"
+              target="_blank">
+              <LocationPin /> Abrir no mapa
+            </a>
           </div>
           <iframe
             title="Mapa Centro Espiritualista Caboclo Tupinambá"

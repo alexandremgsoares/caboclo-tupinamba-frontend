@@ -10,13 +10,13 @@ function TabSelector() {
           <p>História</p>
         </Selector>
 
-        <Selector icon={LibraryMusic} route="pontos">
+        {/* <Selector icon={LibraryMusic} route="pontos">
           <p>Pontos e Orações</p>
         </Selector>
 
         <Selector icon={Person} route="entidades">
           <p>Entidades</p>
-        </Selector>
+        </Selector> */}
       </div>
       <div className="p-4 text-center text-xl text-branco">
         <Outlet />

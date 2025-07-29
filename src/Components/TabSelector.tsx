@@ -1,4 +1,4 @@
-import { MenuBook, LibraryMusic, Person } from "@mui/icons-material";
+import { MenuBook } from "@mui/icons-material";
 import Selector from "./Selector";
 import { Outlet } from "react-router";
 

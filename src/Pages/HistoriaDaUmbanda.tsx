@@ -1,7 +1,7 @@
 function HistoriaDaUmbanda() {
   return (
     <div
-      className="max-w-4xl flex flex-col mx-auto text-verde-claro/80 text-justify gap-5 py-4 md:py-16 text-lg
+      className="max-w-4xl flex flex-col mx-auto text-verde-claro/80 text-justify gap-5 py-4 md:py-8 text-lg
     ">
       <h1 className="text-4xl text-verde-claro">História da Umbanda</h1>
       <h2 className="text-xl text-verde-claro font-medium">

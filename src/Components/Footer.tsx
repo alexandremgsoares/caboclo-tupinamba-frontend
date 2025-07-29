@@ -26,7 +26,6 @@ function Footer() {
               <li>História da Umbanda</li>
               <li>Pontos da Umbanda</li>
               <li>Entidades da Umbanda</li>
-              <li>Banhos e suas utilidades</li>
             </ul>
           </div>
           <div className="flex flex-col gap-2 mt-3">

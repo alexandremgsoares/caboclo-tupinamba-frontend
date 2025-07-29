@@ -28,9 +28,9 @@ function Hero({ giras }: { giras: Gira[] }) {
   }
 
   const proximaGiraTexto: string = nextGira
-    ? `Nossa próxima gira será dia: ${padStart(nextGira.day)}/${padStart(
+    ? `Nossa próxima gira será: ${padStart(nextGira.day)}/${padStart(
         nextGira.monthIndex
-      )}/2025 - ${nextGira.titulo}`
+      )}/2025 as 19:30h. ${nextGira.titulo}.`
     : "O calendário do próximo mês será divulgado em breve.";
 
   return (
@@ -42,7 +42,7 @@ function Hero({ giras }: { giras: Gira[] }) {
           className="absolute inset-0 w-full h-full md:h-full object-cover"
         />
         <div className="relative z-10 text-branco font-crimson justify-center flex flex-col h-full items-center px-4  text-center">
-          <h1 className="text-5xl md:text-[80px] font-bold font-cinzel max-w-5xl">
+          <h1 className="text-5xl md:text-[80px] font-medium font-cinzel max-w-5xl">
             Venha conhecer a nossa casa.
           </h1>
           <p className="text-3xl">

@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# Principais páginas do site
+Allow: /historia
+Allow: /#centro
+Allow: /#calendario
+
+# Permitir acesso a recursos estáticos
+Allow: /assets/
+Allow: /public/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.svg
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.webp
+
+# Bloquear arquivos desnecessários para SEO
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.map
+Disallow: /manifest.json
+Disallow: /vite.config.*
+Disallow: /package.json
+Disallow: /tsconfig.json
+Disallow: /.git/
+Disallow: /.env
+
+# Referência ao sitemap (quando criado)
+# Sitemap: https://seudominio.com/sitemap.xml
+
+# Crawl-delay para ser respeitoso com os servidores
+Crawl-delay: 1

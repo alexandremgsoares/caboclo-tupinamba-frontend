@@ -106,7 +106,7 @@ function Header() {
   // };
 
   return (
-    <header className="bg-verde-claro shadow-md text-verde-escuro font-cinzel text-[18px] sticky top-0 z-50">
+    <header className="bg-verde-claro shadow-md text-verde-escuro font-cinzel text-[18px]">
       <div className="flex items-center justify-between max-w-7xl mx-auto px-4 py-2 gap-2 md:text-[18px]">
         <a href="/">
           <img
@@ -128,7 +128,7 @@ function Header() {
               <ul className="absolute right-0 mt-4 bg-verde-claro text-verde-escuro flex flex-col gap-4 p-6 shadow-lg z-50 text-nowrap rounded-lg">
                 <li className="border rounded-lg py-2 px-4">
                   <a href="/#centro" onClick={() => setIsMenuOpen(false)}>
-                    O centro
+                    O Centro
                   </a>
                 </li>
                 <li className="border rounded-lg py-2 px-4">
@@ -155,7 +155,7 @@ function Header() {
           <nav>
             <ul className="flex items-center gap-4">
               <li>
-                <a href="/#centro">O centro</a>
+                <a href="/#centro">O Centro</a>
               </li>
               <li>
                 <NavLink to="/historia">A Umbanda</NavLink>

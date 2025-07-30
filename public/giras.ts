@@ -78,7 +78,7 @@ export const giras: Array<Gira> = [
     monthIndex: 8,
   },
   {
-    titulo: "Gira Caboclos e Boiadeiros",
+    titulo: "Gira com Caboclos e Boiadeiros",
     day: 12,
     month: "Agosto",
     year: 2025,

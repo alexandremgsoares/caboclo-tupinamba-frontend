@@ -23,14 +23,16 @@ function Hero({ giras }: { giras: Gira[] }) {
   const today = new Date();
   const nextGira = getProximaGira(today, giras);
 
-  function padStart(n: number) {
-    return String(n).padStart(2, "0");
-  }
-
   const proximaGiraTexto: string = nextGira
-    ? `Nossa próxima gira será: ${padStart(nextGira.day)}/${padStart(
-        nextGira.monthIndex
-      )}/2025 as 19:30h. ${nextGira.titulo}.`
+    ? (() => {
+        const giraDate = new Date(2025, nextGira.monthIndex - 1, nextGira.day);
+        const formattedDate = giraDate.toLocaleDateString("pt-BR", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        });
+        return `Nossa próxima gira será: ${formattedDate} às 19:30h. ${nextGira.titulo}.`;
+      })()
     : "O calendário do próximo mês será divulgado em breve.";
 
   return (

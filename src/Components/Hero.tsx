@@ -55,7 +55,7 @@ function Hero({ giras }: { giras: Gira[] }) {
               {proximaGiraTexto}
             </p>
             <a
-              className="inline-flex items-center text-xl md:text-2xl gap-2 py-2.5 px-4 rounded-lg bg-verde text-verde-claro"
+              className="inline-flex items-center text-xl md:text-2xl gap-2 py-2.5 px-4 rounded-lg bg-verde-claro text-verde-escuro"
               href="https://maps.app.goo.gl/3u36hYXEZQSNtV2p6"
               target="_blank">
               <LocationPin /> Como chegar no nosso centro.

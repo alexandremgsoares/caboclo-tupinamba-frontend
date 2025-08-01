@@ -19,8 +19,8 @@ function Home() {
       <Header />
       <main className="flex-1 bg-verde-escuro">
         <Hero giras={giras} />
-        <Historia />
         <Agenda giras={giras} />
+        <Historia />
       </main>
       <Footer />
     </div>

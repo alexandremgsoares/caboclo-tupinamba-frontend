@@ -13,8 +13,8 @@ function Agenda({ giras }: { giras: Gira[] }) {
           {/* <h3 className="text-4xl text-center">Orientações</h3> */}
           <ul className="list-disc pl-6 text-xl text-branco/90 flex flex-col gap-4">
             <li>
-              O terreiro é um local sagrado, evite roupas curtas, decoatadas ou
-              escuras. Recomenda-se roupas claras e sem muitos acessórios que
+              O terreiro é um local sagrado, evite roupas curtas, decotadas ou
+              escuras. Recomendam-se roupas claras e sem muitos acessórios que
               possam chamar atenção.
             </li>
             <li>Ao chegar ao terreiro, coloque o seu celular no silencioso.</li>
@@ -24,18 +24,18 @@ function Agenda({ giras }: { giras: Gira[] }) {
             </li>
             <li>
               Atente-se ao chamado das senhas para tomar o seu passe e, ao ser
-              chamado devolva a ficha ao médium responsável.
+              chamado, devolva a ficha ao médium responsável.
             </li>
             <li>
               Não é permitido fumar nas dependências do terreiro, somente na
-              área externa
+              área externa.
             </li>
             <li>
               Não é permitido filmar ou fotografar dentro das dependências do
               terreiro.
             </li>
-            <li>Contribua com a limpeza, lixo é no lixo.</li>
-            <li>Em caso de dúvidas, pergunte aos médiuns presentes</li>
+            <li>Contribua com a limpeza, lixo é na lixeira.</li>
+            <li>Em caso de dúvidas, pergunte aos médiuns presentes.</li>
           </ul>
         </div>
       </div>

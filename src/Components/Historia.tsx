@@ -9,30 +9,28 @@ function Historia() {
         <h3
           className="my-4
          text-3xl text-verde-claro/90">
-          Nascimento do Terreiro
+          Nascimento do Terreiro.
         </h3>
         <p className="mt-4 text-xl text-verde-claro/90 text-justify">
           {" "}
-          O Centro Espiritualista de Umbanda CabocloTupinambá foi fundado no dia
-          01 de Julho de 2024, numa construção teoricamente pequena que aos
-          poucos vem crescendo com muito amor e carinho, o que era um lugar de
-          reunir os amigos se tornou um terreiro. A expectativa era de que
-          seríamos em 3 ou 4 médiuns no período de 1 ano e que atenderíamos umas
-          10 pessoas para passes e consultas por gira. Entretanto, mais pessoas
-          foram chegando e a necessidade de ampliar foi eminente. A gira de
-          terça-feira nasceu para poder ajudar mais pessoas e aproveitar o
-          espaço que tínhamos, em pouco mais de 11 meses já tínhamos 16 mediuns.
-          Eu Vinicius Rodrigo de Araújo , aos 43 anos de vida , sou o fundador
-          do Centro , e sempre digo que o terreiro não é meu, que é do Caboclo
-          Tupinambá e Pai Joaquim das Almas e de todos que nele se fazem
-          presentes. E é a mais pura verdade, pois o CEUCT hoje é um sistema
-          vivo onde as pessoas podem participar, mas não só da gira, e sim da
-          família CEUCT. Cuidam da casa, das energias, das amizades, do
-          espírito, enfim... da sua existência! Hoje o Terreiro caminha para um
-          NOVA ERA , onde a APOMETRIA , REIKI , TERAPIA HOLISTICA haverá espaço
-          para todos fortalecendo ainda mais os laços de solidariedade e
-          assistência aos que necessitam, colocando em prática a fundamentação
-          da Umbanda: Amor, Caridade e Humildade.{" "}
+          O Centro Espiritualista de Umbanda Caboclo Tupinambá (CEUCT) foi
+          fundado no dia primeiro de julho de 2024. Uma construção pequena que
+          vem crescendo com muito amor e carinho. Era um lugar de reunir os
+          amigos e se tornou um terreiro. Éramos 3 ou 4 médiuns, atendendo
+          poucas pessoas para passes e consultas por gira. Entretanto, mais
+          pessoas foram chegando, e a necessidade de ampliar foi iminente. A
+          gira de terça-feira acontece para ajudar maior número de pessoas e
+          aproveitar o espaço construído, contando, em pouco mais de 11 meses,
+          com 16 médiuns. Eu, Vinicius Rodrigo de Araújo, 43 anos, sou o
+          fundador do Centro, mas o terreiro não é meu, é do Caboclo Tupinambá,
+          do Pai Joaquim das Almas e de todos que participam dele. O CEUCT hoje
+          é um sistema vivo, onde as pessoas fazem parte não só da gira, mas
+          também da família CEUCT. Cuidamos da casa, das energias, das amizades,
+          do espírito, enfim... da nossa existência! O terreiro caminha para uma
+          NOVA ERA, onde a APOMETRIA, o REIKI e a TERAPIA HOLÍSTICA serão
+          acrescentados, fortalecendo ainda mais os laços de solidariedade e
+          assistência aos que buscam acolhimento de suas necessidades, colocando
+          em prática a fundamentação da Umbanda: Amor, Caridade e Humildade.{" "}
         </p>
       </div>
       <img

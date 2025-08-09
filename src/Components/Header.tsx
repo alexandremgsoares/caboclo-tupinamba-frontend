@@ -2,38 +2,13 @@ import { Menu } from "@mui/icons-material";
 import { Close } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
-// import { Workbox } from "workbox-window";
 import logo from "/tupinamba-logo-horizontal.svg";
 
-// interface BeforeInstallPromptEvent extends Event {
-//   readonly platforms: string[];
-//   readonly userChoice: Promise<{
-//     outcome: "accepted" | "dismissed";
-//     platform: string;
-//   }>;
-//   prompt(): Promise<void>;
-// }
 
 function Header() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const [deferredPrompt, setDeferredPrompt] =
-  //   useState<BeforeInstallPromptEvent | null>(null);
-  // const [isInstallable, setIsInstallable] = useState(false);
 
-  // useEffect(() => {
-  //   if ("serviceWorker" in navigator) {
-  //     const wb = new Workbox("/sw.js");
-
-  //     wb.addEventListener("installed", (event) => {
-  //       console.log("SW registrado:", event);
-  //     });
-
-  //     wb.register().catch((error) => {
-  //       console.log("Erro SW:", error);
-  //     });
-  //   }
-  // }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -44,66 +19,7 @@ function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // useEffect(() => {
-  //   const handleBeforeInstallPrompt = (e: Event) => {
-  //     console.log("beforeinstallprompt disparado", e);
-  //     e.preventDefault();
-  //     const event = e as BeforeInstallPromptEvent;
-  //     setDeferredPrompt(event);
-  //     setIsInstallable(true);
-  //   };
 
-  //   const handleAppInstalled = () => {
-  //     console.log("App instalado");
-  //     setDeferredPrompt(null);
-  //     setIsInstallable(false);
-  //   };
-
-  //   window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-  //   window.addEventListener("appinstalled", handleAppInstalled);
-
-  //   // Verificar se já está instalado
-  //   const isStandalone = window.matchMedia(
-  //     "(display-mode: standalone)"
-  //   ).matches;
-
-  //   if (isStandalone) {
-  //     setIsInstallable(false);
-  //     console.log("App já está instalado");
-  //     return;
-  //   }
-
-  //   // Fallback para iOS Safari
-  //   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-  //   if (isIOS && !isStandalone) {
-  //     setIsInstallable(true);
-  //     console.log("iOS detectado, mostrando botão PWA");
-  //   }
-
-  //   return () => {
-  //     window.removeEventListener(
-  //       "beforeinstallprompt",
-  //       handleBeforeInstallPrompt
-  //     );
-  //     window.removeEventListener("appinstalled", handleAppInstalled);
-  //   };
-  // }, []);
-
-  // const handleInstallClick = () => {
-  //   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
-  //   if (deferredPrompt) {
-  //     deferredPrompt.prompt();
-  //     deferredPrompt.userChoice.then(() => {
-  //       setDeferredPrompt(null);
-  //       setIsInstallable(false);
-  //     });
-  //   } else if (isIOS) {
-  //     alert(
-  //       'Para instalar: toque em "Compartilhar" e depois "Adicionar à Tela de Início"'
-  //     );
-  //   }
-  // };
 
   return (
     <header className="bg-verde-claro shadow-md text-verde-escuro font-cinzel text-[18px]">
@@ -139,15 +55,6 @@ function Header() {
                 <li className="py-2 px-4  bg-verde-escuro text-verde-claro rounded-lg border">
                   <a href="/#calendario">Nossa Agenda</a>
                 </li>
-                {/* {isInstallable && (
-                  <li>
-                    <button
-                      onClick={handleInstallClick}
-                      className="py-2 px-4 rounded-lg bg-verde-escuro text-verde-claro w-full text-left touch-manipulation cursor-pointer active:scale-95 transition-transform">
-                      Salvar página no celular
-                    </button>
-                  </li>
-                )} */}
               </ul>
             )}
           </div>

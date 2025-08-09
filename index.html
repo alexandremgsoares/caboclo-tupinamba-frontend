@@ -36,6 +36,92 @@
     gtag("config", "G-9N4TKHWXSS");
   </script>
   <body>
+    <!-- ⚡ SCRIPT CRÍTICO - EXECUTA ANTES DE TUDO PARA QUEBRAR CACHE -->
+    <script>
+    (function() {
+      console.log('🚀 Script crítico iniciado - quebrando cache...');
+      
+      // Marcar que tivemos SW para detectar usuários com cache antigo
+      const hadSW = localStorage.getItem('had-sw-cache');
+      
+      // Se é primeira visita após ter SW, forçar limpeza agressiva
+      if (hadSW === 'true' && !sessionStorage.getItem('cache-cleared')) {
+        console.log('🔥 Usuário com cache antigo detectado! Iniciando limpeza...');
+        
+        // Marcar que já tentamos limpar nesta sessão
+        sessionStorage.setItem('cache-cleared', 'attempting');
+        
+        // Registrar novo service worker "matador"
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js', { scope: '/' })
+            .then(reg => {
+              console.log('💀 SW Matador registrado:', reg);
+              
+              // Se já tem SW ativo, forçar atualização
+              if (reg.waiting) {
+                reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+              } else if (reg.installing) {
+                reg.installing.addEventListener('statechange', () => {
+                  if (reg.waiting) {
+                    reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+                  }
+                });
+              }
+            })
+            .catch(err => console.log('❌ Erro ao registrar SW Matador:', err));
+          
+          // Escutar mensagens do SW
+          navigator.serviceWorker.addEventListener('message', (event) => {
+            if (event.data && event.data.type === 'FORCE_RELOAD') {
+              console.log('🔄 SW Matador mandou recarregar!');
+              sessionStorage.setItem('cache-cleared', 'completed');
+              window.location.reload(true);
+            }
+          });
+        }
+        
+        // Timeout de segurança - se SW não responder em 3s, forçar reload
+        setTimeout(() => {
+          if (sessionStorage.getItem('cache-cleared') === 'attempting') {
+            console.log('⏰ Timeout - forçando reload direto...');
+            sessionStorage.setItem('cache-cleared', 'timeout');
+            window.location.reload(true);
+          }
+        }, 3000);
+        
+        // Parar execução aqui para esperar reload
+        return;
+      }
+      
+      // Para usuários sem cache antigo, apenas marcar flag
+      if (!hadSW) {
+        localStorage.setItem('had-sw-cache', 'false');
+      }
+      
+      // Limpar service workers antigos de forma assíncrona (não bloquear)
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(registrations => {
+          if (registrations.length > 0) {
+            console.log('🧹 Limpando', registrations.length, 'service workers...');
+            localStorage.setItem('had-sw-cache', 'true');
+            registrations.forEach(reg => reg.unregister());
+          }
+        });
+        
+        // Limpar caches de forma assíncrona
+        if ('caches' in window) {
+          caches.keys().then(cacheNames => {
+            if (cacheNames.length > 0) {
+              console.log('🗑️ Limpando', cacheNames.length, 'caches...');
+              cacheNames.forEach(name => caches.delete(name));
+            }
+          });
+        }
+      }
+      
+    })();
+    </script>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

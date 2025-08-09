@@ -21,14 +21,33 @@ if ('serviceWorker' in navigator) {
   }
 }
 
-const APP_VERSION = '2.0.0';
+const APP_VERSION = '2.1.0';
 const storedVersion = localStorage.getItem('app-version');
+
+// URL Timestamp Bypass - para casos extremos
+const urlParams = new URLSearchParams(window.location.search);
+const forceRefresh = urlParams.get('force') || urlParams.get('v');
+
+if (forceRefresh) {
+  console.log('🔄 Force refresh detectado via URL:', forceRefresh);
+  localStorage.clear();
+  sessionStorage.clear();
+  // Remover parâmetros da URL e recarregar
+  const cleanUrl = window.location.pathname;
+  window.history.replaceState({}, '', cleanUrl);
+}
 
 if (storedVersion && storedVersion !== APP_VERSION) {
   console.log('App version changed, clearing storage and reloading...');
   localStorage.clear();
   sessionStorage.clear();
-  window.location.reload();
+  
+  // Se ainda não funcionou, usar timestamp bypass
+  if (!window.location.search.includes('v=')) {
+    window.location.href = window.location.href + '?v=' + APP_VERSION + '-' + Date.now();
+  } else {
+    window.location.reload();
+  }
 } else if (!storedVersion) {
   localStorage.setItem('app-version', APP_VERSION);
 }

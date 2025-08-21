@@ -1,4 +1,4 @@
-import altar from "/altar.webp";
+import altar from "/altar.avif";
 function Historia() {
   return (
     <section

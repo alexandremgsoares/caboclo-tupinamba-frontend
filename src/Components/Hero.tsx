@@ -1,5 +1,5 @@
 import { LocationPin } from "@mui/icons-material";
-import heroBg from "/bg-hero.webp";
+import heroBg from "/bg-hero.avif";
 import type { Gira } from "../../public/giras";
 
 function getProximaGira(currentDate: Date, giras: Gira[]): Gira | null {

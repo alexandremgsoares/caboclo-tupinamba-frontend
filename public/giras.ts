@@ -133,4 +133,32 @@ export const giras: Array<Gira> = [
     year: 2025,
     monthIndex: 9,
   },
+  {
+    titulo: "Gira com Exus e Pomba Giras",
+    day: 7,
+    month: "Outubro",
+    year: 2025,
+    monthIndex: 10,
+  },
+  {
+    titulo: "Gira com Pretos Velhos",
+    day: 14,
+    month: "Outubro",
+    year: 2025,
+    monthIndex: 10,
+  },
+  {
+    titulo: "Não haverá Gira",
+    day: 21,
+    month: "Outubro",
+    year: 2025,
+    monthIndex: 10,
+  },
+  {
+    titulo: "Gira com Caboclos e Boiadeiros",
+    day: 28,
+    month: "Outubro",
+    year: 2025,
+    monthIndex: 10,
+  },
 ];

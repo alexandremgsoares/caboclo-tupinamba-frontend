@@ -1,9 +1,13 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./Pages/Home";
-import UmbandaLayout from "./Pages/UmbandaLayout";
 import HistoriaDaUmbanda from "./Pages/HistoriaDaUmbanda";
-import PontosEOracoes from "./Pages/PontosEOracoes";
+// import PontosEOracoes from "./Pages/PontosEOracoes";
 // import Entidades from "./Pages/Entidades";
+// import Orixas from "./Components/Orixas";
+// import Exus from "./Components/Exus";
+// import Caboclos from "./Components/Caboclos";
+import OCentro from "./Pages/OCentro.tsx";
+import Biblioteca from "./Pages/Biblioteca.tsx";
 
 function App() {
   return (
@@ -11,12 +15,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route element={<UmbandaLayout />}>
-            <Route index element={<Navigate to="historia" replace />} />
-            <Route path="historia" element={<HistoriaDaUmbanda />} />
-            <Route path="pontos" element={<PontosEOracoes />} />
-            {/* <Route path="entidades" element={<Entidades />} /> */}
-          </Route>
+          <Route path="centro" element={<OCentro />} />
+          <Route path="historia" element={<HistoriaDaUmbanda />} />
+          <Route path="biblioteca" element={<Biblioteca />} />
+          {/* <Route path="pontos" element={<PontosEOracoes />}>
+            <Route index element={<Navigate to="orixas" replace />} />
+            <Route path="orixas" element={<Orixas />} />
+            <Route path="exus" element={<Exus />} />
+            <Route path="caboclos" element={<Caboclos />} />
+          </Route> */}
+          {/* <Route path="entidades" element={<Entidades />} /> */}
         </Routes>
       </BrowserRouter>
     </div>

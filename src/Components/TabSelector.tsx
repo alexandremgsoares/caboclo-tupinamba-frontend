@@ -1,4 +1,4 @@
-import { MenuBook } from "@mui/icons-material";
+import { MenuBook, LibraryMusic } from "@mui/icons-material";
 import Selector from "./Selector";
 import { Outlet } from "react-router";
 
@@ -10,11 +10,11 @@ function TabSelector() {
           <p>História</p>
         </Selector>
 
-        {/* <Selector icon={LibraryMusic} route="pontos">
+        <Selector icon={LibraryMusic} route="pontos">
           <p>Pontos e Orações</p>
         </Selector>
 
-        <Selector icon={Person} route="entidades">
+        {/* <Selector icon={Person} route="entidades">
           <p>Entidades</p>
         </Selector> */}
       </div>

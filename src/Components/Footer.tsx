@@ -1,6 +1,7 @@
 import { LocationPin } from "@mui/icons-material";
 import logo from "/tupinamba-logo-horizontal.svg";
 import EmailCopy from "./EmailCopy";
+import { NavLink } from "react-router";
 
 function Footer() {
   return (
@@ -18,14 +19,20 @@ function Footer() {
                 <a href="/#centro">Nossa História</a>
               </li>
               <li>
+                <NavLink to="/centro">O Centro</NavLink>
+              </li>
+              <li>
                 <a href="/#calendario">Nossa Agenda</a>
+              </li>
+              <li>
+                <NavLink to="/biblioteca">Biblioteca</NavLink>
               </li>
             </ul>
             <ul>
               <li className="font-bold">Conheça Umbanda</li>
-              <li>História da Umbanda</li>
-              <li>Pontos da Umbanda</li>
-              <li>Entidades da Umbanda</li>
+              <NavLink to="/historia">História da Umbanda</NavLink>
+              {/* <li>Pontos da Umbanda</li> */}
+              {/* <li>Entidades da Umbanda</li> */}
             </ul>
           </div>
           <div className="flex flex-col gap-2 mt-3">

@@ -22,7 +22,7 @@ function Home() {
       <main className="flex-1 bg-verde-escuro">
         <Hero giras={giras} />
         <Agenda giras={giras} />
-        <section className="flex py-16 px-4">
+        {/* <section className="flex py-16 px-4">
           <div className="max-w-6xl flex-col md:flex-row mx-auto flex gap-8">
             <CardInformacao
               link="/historia"
@@ -43,7 +43,7 @@ function Home() {
               descricao="Conheça as entidades da umbanda e como cada uma trabalha."
             />
           </div>
-        </section>
+        </section> */}
         <Historia />
       </main>
       <Footer />

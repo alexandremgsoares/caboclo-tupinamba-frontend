@@ -4,8 +4,8 @@ import Hero from "../Components/Hero";
 import Historia from "../Components/Historia";
 import Agenda from "../Components/Agenda";
 import { giras } from "../../public/giras";
-import CardInformacao from "../Components/CardInformacao";
-import { Groups, LibraryMusic, MenuBook } from "@mui/icons-material";
+// import CardInformacao from "../Components/CardInformacao";
+// import { Groups, LibraryMusic, MenuBook } from "@mui/icons-material";
 
 export type Gira = {
   titulo: string;

@@ -7,7 +7,7 @@ function Biblioteca() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1 bg-verde-escuro px-4 py-8 md:px-8 lg:px-16">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl text-branco mb-4 text-center font-cinzel">
             Biblioteca Caboclo Tupinambá
           </h1>

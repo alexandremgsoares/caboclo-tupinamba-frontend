@@ -18,7 +18,7 @@ function OCentro() {
                 Nossa Missão
               </h2>
               <p>
-                Disseminar a Religião de Umbanda, como instrumento de religação
+                Difundir a Religião de Umbanda, como instrumento de religação
                 entre homem e Deus. Contribuir com a elevação moral e
                 espiritual, individual e social, através das manifestações
                 espirituais, levando o indivíduo ao autoconhecimento e à
@@ -109,6 +109,39 @@ function OCentro() {
             “Mediunidade não é glamour, é serviço, e servir exige entrega,
             silêncio, humildade, escuta, estudo e constância.”
           </p>
+          <p className="font-bold">
+            Quero ser médium, como ingressar na corrente mediúnica do Centro
+            Espiritualista de Umbanda Caboclo Tupinambá (C.E.U.C.T.)?
+          </p>
+          <ul className="list-decimal flex flex-col gap-4">
+            <li>
+              {" "}
+              Assista ao máximo de giras possíveis, para que em seu coração você
+              tenha a certeza de que realmente quer participar e se desenvolver
+              como médium e humano nesta casa.
+            </li>
+            <li>
+              Em nossa casa é obrigatória a permanência de, no mínimo, 10 giras
+              na assistência para pleitear sua entrada na corrente mediúnica.
+            </li>
+
+            <li>
+              Após seu período de assistência, comunique ao cambone que você
+              deseja falar com o dirigente da casa sobre sua entrada na corrente
+              mediúnica.
+            </li>
+            <li>
+              O dirigente, em conversa fraterna, irá explicar as regras,
+              obrigações e funcionamento do C.E.U.C.T.
+            </li>
+            <li>
+              Seu nome será encaminhado para análise através de uma ficha que
+              deverá ser preenchida, e você estará apto a ingressar na corrente
+              mediúnica, de acordo com o quadro de vagas disponíveis no
+              C.E.U.C.T., dando início à sua caminhada na seara umbandista junto
+              conosco.
+            </li>
+          </ul>
         </div>
       </main>
       <Footer />

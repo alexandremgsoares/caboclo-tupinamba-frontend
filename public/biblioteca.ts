@@ -315,4 +315,85 @@ export const bibliotecaLivros: Livro[] = [
     titulo: "Semeando a luz na escuridão",
     autor: "Associação dos Deficientes Visuais de Patos de Minas",
   },
+  {
+    item: "60",
+    titulo: "A Vida Depois da Morte",
+    autor: "Osmar Barbosa",
+  },
+  {
+    item: "61",
+    titulo: "Guardião Exu",
+    autor: "Osmar Barbosa",
+  },
+  {
+    item: "62",
+    titulo: "Impuros – A Legião de Exus",
+    autor: "Osmar Barbosa",
+  },
+  {
+    item: "63",
+    titulo: "Colônia Espiritual – Laços Eternos",
+    autor: "Osmar Barbosa",
+  },
+  {
+    item: "64",
+    titulo: "Os Viajores – Agentes dos Guardiões ",
+    autor: "Robson Pinheiro",
+  },
+  {
+    item: "65",
+    titulo: "O Reencontro de Heróis – Lutando para Vencer",
+    autor: "João Alberto Teodoro",
+  },
+  {
+    item: "66",
+    titulo: "Jesus e as Sete Igrejas da Ásia – Esmirna",
+    autor: "Paiva Netto",
+  },
+  {
+    item: "67",
+    titulo: "Jesus e as Sete Igrejas da Ásia – Éfeso ",
+    autor: "Paiva Netto",
+  },
+  {
+    item: "68",
+    titulo:
+      "Buscando a Essência da Sabedoria – O Caminho da Meditação Perceptiva",
+    autor: "Joseph Goldstein e Jack Kornfield",
+  },
+  {
+    item: "69",
+    titulo: "Saúde das Emoções",
+    autor: "Alírio de Cerqueira Filho",
+  },
+  {
+    item: "70",
+    titulo: "A Missão dos 70 e o Lobo Invisível ",
+    autor: "Paiva Netto",
+  },
+  {
+    item: "71",
+    titulo: "Senhor Exu Calunga, um guardião da lei na Umbanda ",
+    autor: "José Augusto Barboza",
+  },
+  {
+    item: "72",
+    titulo: "Marabô, o Guardião das Matas",
+    autor: "José Augusto Barboza",
+  },
+  {
+    item: "73",
+    titulo: "Os Arquétipos da Umbanda, As Hierarquias Espirituais dos Orixás",
+    autor: "Rubens Saraceni",
+  },
+  {
+    item: "74",
+    titulo: "Desenvolvimento Mediúnico, Mediunidade Prática",
+    autor: "Edgar Armond",
+  },
+  {
+    item: "75",
+    titulo: "Os Sete Orixás na Umbanda, Ensaios, Fundamentos e Rituais",
+    autor: "Rodrigo Volponi",
+  },
 ];

@@ -12,13 +12,13 @@ function Biblioteca() {
             Biblioteca Caboclo Tupinambá
           </h1>
           <p className="text-verde-claro text-center mb-4 font-crimson text-xl md:text-2xl">
-            Acervo disponível para consulta e empréstimo aos frequentadores do “
-            Centro Espiritualista de Umbanda Caboclo Tupinambá “
+            Acervo disponível para consulta e empréstimo aos frequentadores do
+            Centro Espiritualista de Umbanda Caboclo Tupinambá.
           </p>
           <div className="bg-verde-claro-2/20 border-l-4 border-verde-claro-2 rounded-r-lg p-4 mb-8 max-w-3xl mx-auto">
             <p className="text-verde-claro font-crimson text-lg md:text-xl text-center">
               Para pegar um livro emprestado, fale com um dos atendentes durante
-              as “Giras”
+              as giras.
             </p>
           </div>
 

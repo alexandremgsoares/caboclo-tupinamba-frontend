@@ -37,7 +37,7 @@ export const bibliotecaLivros: Livro[] = [
   },
   {
     item: "07",
-    titulo: "Legião – Um olha sobre reino das sombras",
+    titulo: "Legião – Um Olhar sobre reino das sombras",
     autor: "Robson Pinheiro (esp. Ângelo Inácio)",
   },
   {

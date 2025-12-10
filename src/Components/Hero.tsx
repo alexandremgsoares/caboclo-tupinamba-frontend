@@ -3,14 +3,15 @@ import heroBg from "/bg-hero.avif";
 import type { Gira } from "../../public/giras";
 
 function getProximaGira(currentDate: Date, giras: Gira[]): Gira | null {
-  const sorted = [...giras].sort((a, b) => {
-    const dateA = new Date(2025, a.monthIndex - 1, a.day);
-    const dateB = new Date(2025, b.monthIndex - 1, b.day);
+  const girasParaHero = giras.filter((gira) => gira.exibirNoHero);
+  const sorted = [...girasParaHero].sort((a, b) => {
+    const dateA = new Date(a.year, a.monthIndex - 1, a.day);
+    const dateB = new Date(b.year, b.monthIndex - 1, b.day);
     return dateA.getTime() - dateB.getTime();
   });
 
   for (const gira of sorted) {
-    const eventDate = new Date(2025, gira.monthIndex - 1, gira.day + 1);
+    const eventDate = new Date(gira.year, gira.monthIndex - 1, gira.day + 1);
     if (eventDate > currentDate) {
       return gira;
     }
@@ -25,7 +26,11 @@ function Hero({ giras }: { giras: Gira[] }) {
 
   const proximaGiraTexto: string = nextGira
     ? (() => {
-        const giraDate = new Date(2025, nextGira.monthIndex - 1, nextGira.day);
+        const giraDate = new Date(
+          nextGira.year,
+          nextGira.monthIndex - 1,
+          nextGira.day
+        );
         const formattedDate = giraDate.toLocaleDateString("pt-BR", {
           day: "2-digit",
           month: "2-digit",

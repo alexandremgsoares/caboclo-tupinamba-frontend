@@ -12,12 +12,12 @@ export const bibliotecaLivros: Livro[] = [
   },
   {
     item: "02",
-    titulo: "Umbanda. A nova era chegou",
+    titulo: "Umbanda. A nova Era chegou",
     autor: "Sandro Luiz e Murilo Hiarlley",
   },
   {
     item: "03",
-    titulo: "Entrevista com espíritos (os bastidores do centro espírita)",
+    titulo: "Entrevista com Espíritos (os bastidores do centro espírita)",
     autor: "Osmar Barbosa",
   },
   {
@@ -57,12 +57,12 @@ export const bibliotecaLivros: Livro[] = [
   },
   {
     item: "11",
-    titulo: "Reiri para iniciantes",
-    autor: "David Hennells",
+    titulo: "Reiki para iniciantes",
+    autor: "David Vennells",
   },
   {
     item: "12",
-    titulo: "Charras Autocura",
+    titulo: "Chakras Autocura",
     autor: "Ana Maria Nardini",
   },
   {
@@ -83,7 +83,7 @@ export const bibliotecaLivros: Livro[] = [
   {
     item: "16",
     titulo: "Deus confia nos Pais",
-    autor: "Lucia Moisés",
+    autor: "Lucia Moysés",
   },
   {
     item: "17",
@@ -92,7 +92,7 @@ export const bibliotecaLivros: Livro[] = [
   },
   {
     item: "18",
-    titulo: "O evangelho no lar (onde, como e por que)",
+    titulo: "O Evangelho no lar (onde, como e por que)",
     autor: "FEAL – Fundação esp. André Luiz",
   },
   {
@@ -132,12 +132,12 @@ export const bibliotecaLivros: Livro[] = [
   },
   {
     item: "26 A",
-    titulo: "O livro dos espíritos",
+    titulo: "O livro dos Espíritos",
     autor: "Allan Kardec",
   },
   {
     item: "26 B",
-    titulo: "O livro dos espíritos",
+    titulo: "O livro dos Espíritos",
     autor: "Allan Kardec",
   },
   {
@@ -152,18 +152,18 @@ export const bibliotecaLivros: Livro[] = [
   },
   {
     item: "28 A",
-    titulo: "O evangelho segundo o espiritismo",
+    titulo: "O Evangelho Segundo o Espiritismo",
     autor: "Allan Kardec",
   },
   {
     item: "28 B",
-    titulo: "O evangelho segundo o espiritismo",
+    titulo: "O Evangelho Segundo o Espiritismo",
     autor: "Allan Kardec",
   },
   {
     item: "29",
     titulo: "Os mortos não morrem",
-    autor: "Paiva Neto",
+    autor: "Paiva Netto",
   },
   {
     item: "30",
@@ -177,18 +177,18 @@ export const bibliotecaLivros: Livro[] = [
   },
   {
     item: "32",
-    titulo: "Nessa nova caminhada",
+    titulo: "Nessa Nova Caminhada",
     autor: "Lidiana Betega",
   },
   {
     item: "33",
-    titulo: "Vivendo o mundo dos espíritos",
+    titulo: "Vivendo no mundo dos espíritos",
     autor: "Vera Lucia M. Carvalho (esp Patrícia)",
   },
   {
     item: "34",
     titulo: "Elizabetta de La Paz",
-    autor: "Helaine Coutinho Sabradine (esp. Nathanael)",
+    autor: "Helaine Coutinho Sabbadine (esp. Nathanael)",
   },
   {
     item: "35",
@@ -197,8 +197,8 @@ export const bibliotecaLivros: Livro[] = [
   },
   {
     item: "36",
-    titulo: "O poder da liberdade",
-    autor: "André Luís Chiarini Vellar",
+    titulo: "O Poder da liberdade",
+    autor: "André Luís Chiarini Villar",
   },
   {
     item: "37",
@@ -267,7 +267,7 @@ export const bibliotecaLivros: Livro[] = [
   },
   {
     item: "50",
-    titulo: "Bíblia de estudo Scofiel",
+    titulo: "Bíblia de estudo Scofield",
     autor: "Almeida Corrigida Fiel",
   },
   {

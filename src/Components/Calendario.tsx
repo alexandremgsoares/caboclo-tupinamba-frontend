@@ -9,6 +9,7 @@ function Calendario(giras: { giras: Gira[] }) {
   const [mesAtual, setMesAtual] = useState<Mes>(
     (new Date().getMonth() + 1) as Mes
   );
+  const [anoAtual, setAnoAtual] = useState<number>(new Date().getFullYear());
 
   const meses: string[] = [
     "",
@@ -26,14 +27,26 @@ function Calendario(giras: { giras: Gira[] }) {
     "Dezembro",
   ];
 
-  const girasDoMes = giras.giras.filter((gira) => gira.monthIndex === mesAtual);
+  const girasDoMes = giras.giras.filter(
+    (gira) => gira.monthIndex === mesAtual && gira.year === anoAtual
+  );
 
   function handleNextMonth(): void {
-    setMesAtual((prev) => (prev === 12 ? 1 : prev + 1) as Mes);
+    if (mesAtual === 12) {
+      setMesAtual(1 as Mes);
+      setAnoAtual(prev => prev + 1);
+    } else {
+      setMesAtual((prev) => (prev + 1) as Mes);
+    }
   }
 
   function handlePreviousMonth(): void {
-    setMesAtual((prev) => (prev === 1 ? 12 : prev - 1) as Mes);
+    if (mesAtual === 1) {
+      setMesAtual(12 as Mes);
+      setAnoAtual(prev => prev - 1);
+    } else {
+      setMesAtual((prev) => (prev - 1) as Mes);
+    }
   }
 
   return (
@@ -52,7 +65,7 @@ function Calendario(giras: { giras: Gira[] }) {
             }}
           />
         </button>
-        <h2>{meses[mesAtual]} 2025</h2>
+        <h2>{meses[mesAtual]} {anoAtual}</h2>
         <button onClick={handleNextMonth}>
           <NavigateNext
             sx={{
@@ -83,7 +96,7 @@ function Calendario(giras: { giras: Gira[] }) {
             <div>
               <p className="text-branco text-xl">{gira.titulo}</p>
               <p className="text-branco/80">
-                19:30 - {gira.day} de {gira.month} de 2025
+                19:30 - {gira.day} de {gira.month} de {gira.year}
               </p>
             </div>
           </div>

@@ -4,6 +4,7 @@ export type Gira = {
   month: string;
   year: number;
   monthIndex: number;
+  exibirNoHero: boolean;
 };
 
 export const giras: Array<Gira> = [
@@ -13,6 +14,7 @@ export const giras: Array<Gira> = [
     month: "Junho",
     year: 2025,
     monthIndex: 6,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Exus e Pomba Giras",
@@ -20,6 +22,7 @@ export const giras: Array<Gira> = [
     month: "Junho",
     year: 2025,
     monthIndex: 6,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Caboclos e Boiadeiros",
@@ -27,6 +30,7 @@ export const giras: Array<Gira> = [
     month: "Junho",
     year: 2025,
     monthIndex: 6,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Caboclos / Dia de Xangô",
@@ -34,6 +38,7 @@ export const giras: Array<Gira> = [
     month: "Junho",
     year: 2025,
     monthIndex: 6,
+    exibirNoHero: true,
   },
   {
     titulo: "Aniversário de 1 Ano do Centro",
@@ -41,6 +46,7 @@ export const giras: Array<Gira> = [
     month: "Julho",
     year: 2025,
     monthIndex: 7,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Pretos Velhos",
@@ -48,6 +54,7 @@ export const giras: Array<Gira> = [
     month: "Julho",
     year: 2025,
     monthIndex: 7,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Caboclos e Boiadeiros",
@@ -55,6 +62,7 @@ export const giras: Array<Gira> = [
     year: 2025,
     month: "Julho",
     monthIndex: 7,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Pretos Velhos",
@@ -62,6 +70,7 @@ export const giras: Array<Gira> = [
     year: 2025,
     month: "Julho",
     monthIndex: 7,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Caboclos",
@@ -69,6 +78,7 @@ export const giras: Array<Gira> = [
     year: 2025,
     month: "Julho",
     monthIndex: 7,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Exus e Pomba Giras",
@@ -76,6 +86,7 @@ export const giras: Array<Gira> = [
     month: "Agosto",
     year: 2025,
     monthIndex: 8,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Caboclos e Boiadeiros",
@@ -83,6 +94,7 @@ export const giras: Array<Gira> = [
     month: "Agosto",
     year: 2025,
     monthIndex: 8,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Caboclos",
@@ -90,6 +102,7 @@ export const giras: Array<Gira> = [
     month: "Agosto",
     year: 2025,
     monthIndex: 8,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Pretos Velhos",
@@ -97,6 +110,7 @@ export const giras: Array<Gira> = [
     month: "Agosto",
     year: 2025,
     monthIndex: 8,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Exus e Pomba Giras",
@@ -104,6 +118,7 @@ export const giras: Array<Gira> = [
     month: "Setembro",
     year: 2025,
     monthIndex: 9,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Pretos Velhos",
@@ -111,6 +126,7 @@ export const giras: Array<Gira> = [
     month: "Setembro",
     year: 2025,
     monthIndex: 9,
+    exibirNoHero: true,
   },
   {
     titulo: "Não haverá Gira",
@@ -118,6 +134,7 @@ export const giras: Array<Gira> = [
     month: "Setembro",
     year: 2025,
     monthIndex: 9,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Erês",
@@ -125,6 +142,7 @@ export const giras: Array<Gira> = [
     month: "Setembro",
     year: 2025,
     monthIndex: 9,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Caboclos",
@@ -132,6 +150,7 @@ export const giras: Array<Gira> = [
     month: "Setembro",
     year: 2025,
     monthIndex: 9,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Exus e Pomba Giras",
@@ -139,6 +158,7 @@ export const giras: Array<Gira> = [
     month: "Outubro",
     year: 2025,
     monthIndex: 10,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Pretos Velhos",
@@ -146,6 +166,7 @@ export const giras: Array<Gira> = [
     month: "Outubro",
     year: 2025,
     monthIndex: 10,
+    exibirNoHero: true,
   },
   {
     titulo: "Não haverá Gira",
@@ -153,6 +174,7 @@ export const giras: Array<Gira> = [
     month: "Outubro",
     year: 2025,
     monthIndex: 10,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Caboclos e Boiadeiros",
@@ -160,6 +182,7 @@ export const giras: Array<Gira> = [
     month: "Outubro",
     year: 2025,
     monthIndex: 10,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Pretos Velhos",
@@ -167,6 +190,7 @@ export const giras: Array<Gira> = [
     month: "Novembro",
     year: 2025,
     monthIndex: 11,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Caboclos",
@@ -174,6 +198,7 @@ export const giras: Array<Gira> = [
     month: "Novembro",
     year: 2025,
     monthIndex: 11,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Caboclos e Boiadeiros",
@@ -181,6 +206,7 @@ export const giras: Array<Gira> = [
     month: "Novembro",
     year: 2025,
     monthIndex: 11,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Exus e Pomba Giras",
@@ -188,6 +214,7 @@ export const giras: Array<Gira> = [
     month: "Novembro",
     year: 2025,
     monthIndex: 11,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Exus e Pomba Giras",
@@ -195,6 +222,7 @@ export const giras: Array<Gira> = [
     month: "Dezembro",
     year: 2025,
     monthIndex: 12,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Pretos Velhos",
@@ -202,6 +230,7 @@ export const giras: Array<Gira> = [
     month: "Dezembro",
     year: 2025,
     monthIndex: 12,
+    exibirNoHero: true,
   },
   {
     titulo: "Gira com Exus e Pomba Giras",
@@ -209,6 +238,7 @@ export const giras: Array<Gira> = [
     month: "Dezembro",
     year: 2025,
     monthIndex: 12,
+    exibirNoHero: true,
   },
   {
     titulo: "Recesso",
@@ -216,6 +246,7 @@ export const giras: Array<Gira> = [
     month: "Dezembro",
     year: 2025,
     monthIndex: 12,
+    exibirNoHero: true,
   },
   {
     titulo: "Recesso",
@@ -223,5 +254,78 @@ export const giras: Array<Gira> = [
     month: "Dezembro",
     year: 2025,
     monthIndex: 12,
+    exibirNoHero: true,
+  },
+  {
+    titulo: "Desenvolvimento/Estudos (apenas para membros da casa)",
+    day: 15,
+    month: "Janeiro",
+    year: 2026,
+    monthIndex: 1,
+    exibirNoHero: false,
+  },
+  {
+    titulo: "Gira com Caboclos / OXÓSSI",
+    day: 20,
+    month: "Janeiro",
+    year: 2026,
+    monthIndex: 1,
+    exibirNoHero: true,
+  },
+  {
+    titulo: "Gira com Caboclos e Boiadeiros",
+    day: 27,
+    month: "Janeiro",
+    year: 2026,
+    monthIndex: 1,
+    exibirNoHero: true,
+  },
+  {
+    titulo: "Desenvolvimento/Estudos (apenas para membros da casa)",
+    day: 29,
+    month: "Janeiro",
+    year: 2026,
+    monthIndex: 1,
+    exibirNoHero: false,
+  },
+  {
+    titulo: "Gira com Exus e Pomba Giras",
+    day: 3,
+    month: "Fevereiro",
+    year: 2026,
+    monthIndex: 2,
+    exibirNoHero: true,
+  },
+  {
+    titulo: "Gira com Pretos Velhos",
+    day: 10,
+    month: "Fevereiro",
+    year: 2026,
+    monthIndex: 2,
+    exibirNoHero: true,
+  },
+  {
+    titulo: "Desenvolvimento/Estudos (apenas para membros da casa)",
+    day: 19,
+    month: "Fevereiro",
+    year: 2026,
+    monthIndex: 2,
+    exibirNoHero: false,
+  },
+  {
+    titulo: "Gira com Caboclos",
+    day: 24,
+    month: "Fevereiro",
+    year: 2026,
+    monthIndex: 2,
+    exibirNoHero: true,
+  },
+  {
+    titulo: "Desenvolvimento/Estudos (apenas para membros da casa)",
+    day: 26,
+    month: "Fevereiro",
+    year: 2026,
+    monthIndex: 2,
+    exibirNoHero: false,
   },
 ];

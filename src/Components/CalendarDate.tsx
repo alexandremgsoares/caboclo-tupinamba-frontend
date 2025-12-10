@@ -4,6 +4,7 @@ function CalendarIconWithDate({ day, month }: { day: number; month: string }) {
   return (
     <Box
       sx={{
+        minWidth: 48,
         width: 48,
         borderRadius: "8px 8px 0 0 ",
         overflow: "hidden",

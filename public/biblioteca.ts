@@ -396,4 +396,109 @@ export const bibliotecaLivros: Livro[] = [
     titulo: "Os Sete Orixás na Umbanda, Ensaios, Fundamentos e Rituais",
     autor: "Rodrigo Volponi",
   },
+  {
+    item: "76",
+    titulo: "Senhor Exu Calunga, um guardião da Lei na Umbanda",
+    autor: "José Augusto Barboza",
+  },
+  {
+    item: "77",
+    titulo: "O Livro Essencial de Umbanda",
+    autor: "Ademir Barbosa Júnior",
+  },
+  {
+    item: "78",
+    titulo: "O Terreiro, Vivências de um Médium Contestando o Acaso",
+    autor: "Pedro Scarabelo",
+  },
+  {
+    item: "79",
+    titulo: "Rituais Umbandistas: Oferendas, Firmezas e Assentamentos",
+    autor: "Rubens Saraceni",
+  },
+  {
+    item: "80",
+    titulo: "Entidades da Umbanda: Segredos Revelados das Forças Ancestrais",
+    autor: "Rodrigo Queiroz",
+  },
+  {
+    item: "81 A",
+    titulo: "Umbanda para Iniciantes",
+    autor: "Rodrigo Queiroz",
+  },
+  {
+    item: "81 B",
+    titulo: "Umbanda para Iniciantes",
+    autor: "Rodrigo Queiroz",
+  },
+  {
+    item: "81 C",
+    titulo: "Umbanda para Iniciantes",
+    autor: "Rodrigo Queiroz",
+  },
+  {
+    item: "81 D",
+    titulo: "Umbanda para Iniciantes",
+    autor: "Rodrigo Queiroz",
+  },
+  {
+    item: "82",
+    titulo: "Eu Sou Exu",
+    autor: "Osmar Barbosa (esp. Lucas)",
+  },
+  {
+    item: "83",
+    titulo: "Oxalá: Lendas, Arquétipos e Teologia",
+    autor: "Cláudia Souto e Paulo Augusto",
+  },
+  {
+    item: "84",
+    titulo: "Oxóssi: Lendas, Arquétipos e Teologia",
+    autor: "Cláudia Souto e Paulo Augusto",
+  },
+  {
+    item: "85",
+    titulo: "Ogum: Lendas, Arquétipos e Teologia",
+    autor: "Cláudia Souto e Paulo Augusto",
+  },
+  {
+    item: "86",
+    titulo: "Xangô: Lendas, Arquétipos e Teologia",
+    autor: "Cláudia Souto e Paulo Augusto",
+  },
+  {
+    item: "87",
+    titulo: "Obaluaê: Lendas, Arquétipos e Teologia",
+    autor: "Cláudia Souto e Paulo Augusto",
+  },
+  {
+    item: "88",
+    titulo: "Iemanjá: Lendas, Arquétipos e Teologia",
+    autor: "Cláudia Souto e Paulo Augusto",
+  },
+  {
+    item: "89",
+    titulo: "Iansã: Lendas, Arquétipos e Teologia",
+    autor: "Cláudia Souto e Paulo Augusto",
+  },
+  {
+    item: "90",
+    titulo: "Oxum: Lendas, Arquétipos e Teologia",
+    autor: "Cláudia Souto e Paulo Augusto",
+  },
+  {
+    item: "91",
+    titulo: "Nanã: Lendas, Arquétipos e Teologia",
+    autor: "Cláudia Souto e Paulo Augusto",
+  },
+  {
+    item: "92",
+    titulo: "Encontro com os Orixás",
+    autor: "Maria Aparecida Martins",
+  },
+  {
+    item: "93",
+    titulo: "Orixás na Umbanda (Um Deus, Sete linhas e Muitos Orixás)",
+    autor: "Alexândre Cumino",
+  },
 ];

@@ -316,9 +316,14 @@ export const bibliotecaLivros: Livro[] = [
     autor: "Associação dos Deficientes Visuais de Patos de Minas",
   },
   {
-    item: "60",
+    item: "60 A",
     titulo: "A Vida Depois da Morte",
     autor: "Osmar Barbosa",
+  },
+  {
+    item: "60 B",
+    titulo: "A Vida Depois da Morte",
+    autor: "Osmar Barbosa (esp. Nina Brestonini e Lucas)",
   },
   {
     item: "61",
@@ -442,7 +447,12 @@ export const bibliotecaLivros: Livro[] = [
     autor: "Rodrigo Queiroz",
   },
   {
-    item: "82",
+    item: "82 A",
+    titulo: "Eu Sou Exu",
+    autor: "Osmar Barbosa (esp. Lucas)",
+  },
+  {
+    item: "82 B",
     titulo: "Eu Sou Exu",
     autor: "Osmar Barbosa (esp. Lucas)",
   },
@@ -500,5 +510,153 @@ export const bibliotecaLivros: Livro[] = [
     item: "93",
     titulo: "Orixás na Umbanda (Um Deus, Sete linhas e Muitos Orixás)",
     autor: "Alexândre Cumino",
+  },
+  {
+    item: "94",
+    titulo: "Oferendas e Comidas para os Orixás",
+    autor: "N. A. Molina",
+  },
+  {
+    item: "95",
+    titulo: "O Anjo Negro",
+    autor: "Agnaldo Cardoso",
+  },
+  {
+    item: "96",
+    titulo: "Eu Fui Uma Alma Satânica",
+    autor: "Soror Angélica",
+  },
+  {
+    item: "97",
+    titulo: "A Vida na Visão do Espiritismo",
+    autor: "Alexandre Caldini Neto",
+  },
+  {
+    item: "98",
+    titulo: "Espíritos Entre Nós",
+    autor: "James Van Praagh",
+  },
+  {
+    item: "99",
+    titulo: "Treze Almas",
+    autor: "Marcelo Cezar (esp. Marco Aurélio)",
+  },
+  {
+    item: "100",
+    titulo: "Por que Comigo?",
+    autor: "Vera Lúcia Marinzeck de Carvalho (esp. Antônio Carlos)",
+  },
+  {
+    item: "101",
+    titulo: "Fui Suicida",
+    autor: "Elza Ferreira (esp. Francisco)",
+  },
+  {
+    item: "102",
+    titulo: "Conversando com os Espíritos na Reunião Mediúnica",
+    autor: "Therezinha Oliveira",
+  },
+  {
+    item: "103",
+    titulo: "Para Onde Iremos Após a Morte?",
+    autor: "Nelson Moraes (esp. Aulus)",
+  },
+  {
+    item: "104",
+    titulo: "Um Anjo no Umbral (A Continuação de A Grande Viagem)",
+    autor: "Anita Godoy (esp. Júlio)",
+  },
+  {
+    item: "105",
+    titulo: "Exu Veludo: Quebrando Feitiços e Demandas",
+    autor: "Sebastião Cabral",
+  },
+  {
+    item: "106",
+    titulo: "O Anfitrião do Campo Santo",
+    autor: "André Cozta (esp. Senhor Exu Caveira)",
+  },
+  {
+    item: "107",
+    titulo: "Memórias de um Kiumba",
+    autor: "José Usher",
+  },
+  {
+    item: "108",
+    titulo: "Desvendando Exu: O Guardião dos Caminhos",
+    autor: "Diego de Oxóssi",
+  },
+  {
+    item: "109",
+    titulo: "Zé Pilintra: Sêo Dotô, Sêo Dotô! Bravo Sinhô!",
+    autor: "Mizael Vaz (esp. José Porfírio Santiago)",
+  },
+  {
+    item: "110",
+    titulo: "Exu Caveira: De Padre a Guardião da Calunga",
+    autor: "Maria Célia da Silva (esp. Ramon de Bonvivary, o Exu Caveira)",
+  },
+  {
+    item: "111",
+    titulo: "Das Trevas à Luz: A Morada dos Obsessores",
+    autor: "Evaristo Humberto de Araújo (esp. Elias)",
+  },
+  {
+    item: "112",
+    titulo:
+      "A História da Senhora Pomba Gira Rosa do Lodo: A Guardiã do Amor",
+    autor: "Iara Fátima Drimel",
+  },
+  {
+    item: "113",
+    titulo: "Rosa Negra: A Guardiã das Almas",
+    autor: "Carlos Casimiro (esp. Preto Velho Pai Barnabé)",
+  },
+  {
+    item: "114",
+    titulo: "O Guardião do Cemitério",
+    autor:
+      "Carlos Casimiro (esp. Preto Velho Pai Barnabé e Guardião do Cemitério)",
+  },
+  {
+    item: "115",
+    titulo: "Orixá Pomba Gira: Fundamentação do Mistério na Umbanda",
+    autor: "Rubens Saraceni",
+  },
+  {
+    item: "116",
+    titulo:
+      "O Guardião dos Caminhos: A História do Senhor Guardião Tranca-Ruas",
+    autor: "Rubens Saraceni",
+  },
+  {
+    item: "117",
+    titulo: "A Vida Além da Sepultura",
+    autor: "Hercilio Maes (esp. Ramatís)",
+  },
+  {
+    item: "118",
+    titulo: "Tudo o que Você Precisa Saber sobre Umbanda - Volume 1",
+    autor: "Janaína Azevedo",
+  },
+  {
+    item: "119",
+    titulo: "O Livro da Esquerda na Umbanda",
+    autor: "Janaína Azevedo Corral",
+  },
+  {
+    item: "120",
+    titulo: "Tudo o que Você Precisa Saber sobre Umbanda - Volume 2",
+    autor: "Janaína Azevedo",
+  },
+  {
+    item: "121",
+    titulo: "Tudo o que Você Precisa Saber sobre Umbanda - Volume 3",
+    autor: "Janaína Azevedo",
+  },
+  {
+    item: "122",
+    titulo: "As Sete Linhas da Umbanda",
+    autor: "Janaína Azevedo Corral",
   },
 ];

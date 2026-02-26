@@ -9,6 +9,8 @@
   ![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
   ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
   ![Netlify](https://img.shields.io/badge/Deploy-Netlify-00C7B7?logo=netlify&logoColor=white)
+
+  🇧🇷 Português | 🇺🇸 [English below](#english-version)
 </div>
 
 ---
@@ -130,3 +132,134 @@ O app estará disponível em **http://localhost:3000**.
 ## Licença
 
 Este projeto é de uso privado e institucional do Centro Espiritualista Caboclo Tupinambá.
+
+---
+---
+
+## English Version
+
+<div align="center">
+  🇺🇸 English | 🇧🇷 <a href="#centro-espiritualista-caboclo-tupinambá">Português acima</a>
+</div>
+
+---
+
+## About the Project
+
+**Centro Espiritualista Caboclo Tupinambá** is an Umbanda spiritual center located in Unaí, Minas Gerais, Brazil. This repository contains the source code for its institutional website, built as a modern Single Page Application (SPA).
+
+The website provides:
+
+- Information about the center and its history
+- Calendar of spiritual sessions (*giras*) and events
+- Educational content about the history of Umbanda
+- A library of spiritual books
+- Information about spiritual entities (Orixás, Exus, Caboclos)
+
+> **What is Umbanda?** Umbanda is an Afro-Brazilian syncretic religion that blends African traditions, Indigenous Brazilian spirituality, Spiritism, and Catholicism. It is widely practiced across Brazil.
+
+---
+
+## Tech Stack
+
+| Technology | Version | Purpose |
+|---|---|---|
+| [React](https://react.dev/) | 19 | UI framework |
+| [TypeScript](https://www.typescriptlang.org/) | 5.8 | Static typing |
+| [Vite](https://vite.dev/) | 7 | Build tool & dev server |
+| [React Router](https://reactrouter.com/) | 7 | Client-side routing |
+| [Tailwind CSS](https://tailwindcss.com/) | 4 | Utility-first styling |
+| [Material-UI](https://mui.com/) | 7 | UI components & icons |
+| [Emotion](https://emotion.sh/) | 11 | CSS-in-JS (MUI peer dep) |
+| [Netlify](https://netlify.com) | — | Hosting & deployment |
+
+---
+
+## Project Structure
+
+```
+caboclo-tupinamba-frontend/
+├── public/                   # Static assets and data
+│   ├── giras.ts              # Spiritual sessions dataset
+│   ├── biblioteca.ts         # Library books dataset
+│   ├── _headers              # Netlify headers config
+│   ├── robots.txt            # SEO crawler rules
+│   └── *.avif / *.svg        # Images and logos
+├── src/
+│   ├── Components/           # Reusable components
+│   │   ├── Header.tsx        # Responsive navigation bar
+│   │   ├── Footer.tsx        # Footer with location & contact
+│   │   ├── Hero.tsx          # Hero section (next upcoming event)
+│   │   ├── Agenda.tsx        # Events listing
+│   │   ├── Calendario.tsx    # Interactive calendar
+│   │   ├── Orixas.tsx        # Orixás component
+│   │   ├── Exus.tsx          # Exus component
+│   │   ├── Caboclos.tsx      # Caboclos component
+│   │   └── ...               # Other UI components
+│   ├── Pages/                # Page-level components
+│   │   ├── Home.tsx
+│   │   ├── OCentro.tsx
+│   │   ├── HistoriaDaUmbanda.tsx
+│   │   ├── Biblioteca.tsx
+│   │   └── Entidades.tsx
+│   ├── App.tsx               # App routing
+│   ├── main.tsx              # React entry point
+│   └── index.css             # Global styles & Tailwind theme
+├── index.html                # HTML shell (pt-BR, meta, GA4)
+├── vite.config.ts            # Vite configuration
+└── tsconfig.json             # TypeScript configuration
+```
+
+---
+
+## Pages & Routes
+
+| Route | Page | Description |
+|---|---|---|
+| `/` | Home | Hero with next session, history & agenda |
+| `/centro` | O Centro | About the spiritual center |
+| `/historia` | História da Umbanda | Educational content on Umbanda |
+| `/biblioteca` | Biblioteca | Spiritual books library |
+| `/entidades` | Entidades | Orixás, Exus & Caboclos |
+
+---
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) v18 or higher
+- npm (bundled with Node.js) or any other package manager
+
+---
+
+## Running Locally
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/alexandre/caboclo-tupinamba-frontend.git
+cd caboclo-tupinamba-frontend
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npm run dev
+```
+
+The app will be available at **http://localhost:3000**.
+
+---
+
+## Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start dev server on port 3000 |
+| `npm run build` | Generate production build in `/dist` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+
+---
+
+## License
+
+This project is for private, institutional use by Centro Espiritualista Caboclo Tupinambá.

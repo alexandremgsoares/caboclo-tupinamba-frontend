@@ -659,4 +659,49 @@ export const bibliotecaLivros: Livro[] = [
     titulo: "As Sete Linhas da Umbanda",
     autor: "Janaína Azevedo Corral",
   },
+  {
+    item: "123",
+    titulo: "Sem Medo de Viver",
+    autor: "Zíbia Gasparetto",
+  },
+  {
+    item: "124",
+    titulo: "Tudo Tem Seu Preço",
+    autor: "Zíbia Gasparetto",
+  },
+  {
+    item: "125",
+    titulo: "A Vida Sabe O Que Faz",
+    autor: "Zíbia Gasparetto",
+  },
+  {
+    item: "126",
+    titulo: "O Dom das Lágrimas",
+    autor: "Márcio Mendes",
+  },
+  {
+    item: "127",
+    titulo: "O Coração Sente, O Corpo Dói",
+    autor: "Evelin Goldenberg",
+  },
+  {
+    item: "128",
+    titulo: "Além do Infinito Azul",
+    autor: "Antônio Demarchi",
+  },
+  {
+    item: "129",
+    titulo: "Como Deus Cura a dor",
+    autor: "Mark W. Baker",
+  },
+  {
+    item: "130",
+    titulo: "Oração de São Francisco",
+    autor: "Anderson Cavalcante e Gabriel Perissé",
+  },
+  {
+    item: "131",
+    titulo: "Encontro Diário com Deus, 2019",
+    autor: "Frei Edrian",
+  },
 ];

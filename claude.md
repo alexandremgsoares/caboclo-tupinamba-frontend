@@ -37,52 +37,62 @@ Site institucional do **Centro Espiritualista Caboclo Tupinambá**, localizado e
 
 ## Estrutura de Diretórios
 
+Este repositório é um **monorepo** gerenciado com **npm workspaces**. O frontend vive em `apps/web/` e um backend Go está em desenvolvimento em `apps/api/`.
+
 ```
-caboclo-tupinamba-frontend/
-├── public/
-│   ├── giras.ts              # Dados do calendário de eventos
-│   ├── bg-hero.avif          # Imagem hero otimizada
-│   ├── altar.avif            # Imagem do altar
-│   ├── tupinamba-logo-horizontal.svg
-│   ├── logosemnome.svg
-│   ├── bg-folhas.svg
-│   ├── manifest.json         # PWA manifest
-│   ├── robots.txt
-│   └── _headers              # Headers para deploy
-├── src/
-│   ├── Components/
-│   │   ├── Header.tsx        # Navegação principal com menu mobile
-│   │   ├── Footer.tsx        # Footer com mapa e links
-│   │   ├── Hero.tsx          # Seção hero com próxima gira
-│   │   ├── Historia.tsx      # Seção história do centro
-│   │   ├── Agenda.tsx        # Seção agenda com calendário
-│   │   ├── Calendario.tsx    # Calendário interativo de giras
-│   │   ├── CalendarDate.tsx  # Componente de data do calendário
-│   │   ├── CardInformacao.tsx # Card informativo com ícone
-│   │   ├── CardLetra.tsx     # Card expansível para letras/pontos
-│   │   ├── Selector.tsx      # Botão de seleção de categoria
-│   │   ├── TabSelector.tsx   # Sistema de tabs
-│   │   ├── EmailCopy.tsx     # Componente para copiar email
-│   │   ├── Orixas.tsx        # 🚧 PENDENTE: Pontos de Orixás
-│   │   ├── Exus.tsx          # 🚧 PENDENTE: Pontos de Exus
-│   │   └── Caboclos.tsx      # 🚧 PENDENTE: Pontos de Caboclos
-│   ├── Pages/
-│   │   ├── Home.tsx          # Página inicial
-│   │   ├── HistoriaDaUmbanda.tsx  # História da Umbanda
-│   │   ├── PontosEOracoes.tsx     # Página com sub-rotas de pontos
-│   │   └── Entidades.tsx     # 🚧 PENDENTE: História das entidades
-│   ├── App.tsx               # Configuração de rotas
-│   ├── main.tsx              # Entry point
-│   ├── index.css             # Estilos globais e tema Tailwind
-│   └── vite-env.d.ts
-├── index.html
-├── vite.config.ts
-├── tsconfig.json
-├── tsconfig.app.json
-├── tsconfig.node.json
-├── eslint.config.js
-├── package.json
-└── README.md
+caboclo-tupinamba/
+├── apps/
+│   ├── web/                          # Frontend React + Vite (este app)
+│   │   ├── public/
+│   │   │   ├── giras.ts              # Dados do calendário de eventos
+│   │   │   ├── biblioteca.ts         # Acervo da biblioteca
+│   │   │   ├── bg-hero.avif          # Imagem hero otimizada
+│   │   │   ├── altar.avif            # Imagem do altar
+│   │   │   ├── tupinamba-logo-horizontal.svg
+│   │   │   ├── logosemnome.svg
+│   │   │   ├── bg-folhas.svg
+│   │   │   ├── robots.txt
+│   │   │   └── _headers              # Headers para deploy
+│   │   ├── src/
+│   │   │   ├── Components/
+│   │   │   │   ├── Header.tsx        # Navegação principal com menu mobile
+│   │   │   │   ├── Footer.tsx        # Footer com mapa e links
+│   │   │   │   ├── Hero.tsx          # Seção hero com próxima gira
+│   │   │   │   ├── Historia.tsx      # Seção história do centro
+│   │   │   │   ├── Agenda.tsx        # Seção agenda com calendário
+│   │   │   │   ├── Calendario.tsx    # Calendário interativo de giras
+│   │   │   │   ├── CalendarDate.tsx  # Componente de data do calendário
+│   │   │   │   ├── CardInformacao.tsx # Card informativo com ícone
+│   │   │   │   ├── CardLetra.tsx     # Card expansível para letras/pontos
+│   │   │   │   ├── Selector.tsx      # Botão de seleção de categoria
+│   │   │   │   ├── TabSelector.tsx   # Sistema de tabs
+│   │   │   │   ├── EmailCopy.tsx     # Componente para copiar email
+│   │   │   │   ├── Orixas.tsx        # 🚧 PENDENTE: Pontos de Orixás
+│   │   │   │   ├── Exus.tsx          # 🚧 PENDENTE: Pontos de Exus
+│   │   │   │   └── Caboclos.tsx      # 🚧 PENDENTE: Pontos de Caboclos
+│   │   │   ├── Pages/
+│   │   │   │   ├── Home.tsx          # Página inicial
+│   │   │   │   ├── HistoriaDaUmbanda.tsx  # História da Umbanda
+│   │   │   │   ├── PontosEOracoes.tsx     # Página com sub-rotas de pontos
+│   │   │   │   └── Entidades.tsx     # 🚧 PENDENTE: História das entidades
+│   │   │   ├── App.tsx               # Configuração de rotas
+│   │   │   ├── main.tsx              # Entry point
+│   │   │   ├── index.css             # Estilos globais e tema Tailwind
+│   │   │   └── vite-env.d.ts
+│   │   ├── index.html
+│   │   ├── vite.config.ts
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.app.json
+│   │   ├── tsconfig.node.json
+│   │   ├── eslint.config.js
+│   │   └── package.json              # workspace "@caboclo/web"
+│   └── api/                          # Backend Go (em desenvolvimento pelo Alexandre)
+├── docs/                             # Material de referência (biblioteca.csv, etc)
+├── netlify.toml                      # Config de deploy do frontend no Netlify
+├── package.json                      # Workspace root (npm workspaces)
+├── package-lock.json                 # Lockfile único do monorepo
+├── README.md
+└── claude.md
 ```
 
 ---
@@ -238,10 +248,13 @@ type Gira = {
 
 ## Scripts Disponíveis
 
+Todos os comandos são executados a partir do **root do monorepo** e delegam para o workspace `@caboclo/web`:
+
 ```bash
+npm install      # Instala deps de todos os workspaces (root)
 npm run dev      # Inicia servidor de desenvolvimento (localhost:3000)
-npm run build    # Build de produção (TypeScript + Vite)
-npm run lint     # Executa ESLint
+npm run build    # Build de produção (TypeScript + Vite) → apps/web/dist/
+npm run lint     # Executa ESLint no frontend
 npm run preview  # Preview da build de produção
 ```
 
@@ -249,6 +262,8 @@ npm run preview  # Preview da build de produção
 - Porta: 3000
 - Host: localhost
 - strictPort: true
+
+**Node.js**: requerido v20.19+ ou v22.12+ (exigência do Vite 7).
 
 ---
 
@@ -350,8 +365,8 @@ O projeto está **em produção** e hospedado no Netlify com deploy automático 
 **Workflow de deployment**:
 1. Desenvolvedor faz push para branch `main` no GitHub
 2. Netlify detecta a mudança automaticamente
-3. Build é executado (`npm run build`)
-4. Site é deployado automaticamente
+3. Build é executado (`npm run build` a partir do root do monorepo)
+4. Site é deployado a partir de `apps/web/dist/` (definido em `netlify.toml`)
 
 **Repositório GitHub**:
 - URL: `https://github.com/alexandremgsoares/caboclo-tupinamba`

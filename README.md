@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/tupinamba-logo-horizontal.svg" alt="Centro Espiritualista Caboclo Tupinambá" width="400" />
+  <img src="apps/web/public/tupinamba-logo-horizontal.svg" alt="Centro Espiritualista Caboclo Tupinambá" width="400" />
 
   <h3>Centro Espiritualista Caboclo Tupinambá</h3>
   <p>Site institucional do centro de Umbanda localizado em Unaí, Minas Gerais.</p>
@@ -46,37 +46,31 @@ O site oferece:
 
 ## Estrutura do Projeto
 
+Este repositório é um **monorepo** gerenciado com **npm workspaces**.
+
 ```
-caboclo-tupinamba-frontend/
-├── public/                   # Assets estáticos e dados
-│   ├── giras.ts              # Base de dados das giras (eventos)
-│   ├── biblioteca.ts         # Acervo da biblioteca
-│   ├── _headers              # Configuração de headers do Netlify
-│   ├── robots.txt            # Configuração para crawlers
-│   └── *.avif / *.svg        # Imagens e logos
-├── src/
-│   ├── Components/           # Componentes reutilizáveis
-│   │   ├── Header.tsx        # Barra de navegação (responsiva)
-│   │   ├── Footer.tsx        # Rodapé com localização e contato
-│   │   ├── Hero.tsx          # Seção hero com próxima gira
-│   │   ├── Agenda.tsx        # Listagem de eventos
-│   │   ├── Calendario.tsx    # Calendário interativo
-│   │   ├── Orixas.tsx        # Componente de Orixás
-│   │   ├── Exus.tsx          # Componente de Exus
-│   │   ├── Caboclos.tsx      # Componente de Caboclos
-│   │   └── ...               # Outros componentes auxiliares
-│   ├── Pages/                # Páginas da aplicação
-│   │   ├── Home.tsx
-│   │   ├── OCentro.tsx
-│   │   ├── HistoriaDaUmbanda.tsx
-│   │   ├── Biblioteca.tsx
-│   │   └── Entidades.tsx
-│   ├── App.tsx               # Roteamento principal
-│   ├── main.tsx              # Entry point do React
-│   └── index.css             # Estilos globais e tema Tailwind
-├── index.html                # HTML base (pt-BR, meta tags, GA4)
-├── vite.config.ts            # Configuração do Vite
-└── tsconfig.json             # Configuração do TypeScript
+caboclo-tupinamba/
+├── apps/
+│   ├── web/                      # Frontend React + Vite (este app)
+│   │   ├── public/               # Assets estáticos e dados
+│   │   │   ├── giras.ts          # Base de dados das giras (eventos)
+│   │   │   ├── biblioteca.ts     # Acervo da biblioteca
+│   │   │   ├── _headers          # Configuração de headers do Netlify
+│   │   │   ├── robots.txt        # Configuração para crawlers
+│   │   │   └── *.avif / *.svg    # Imagens e logos
+│   │   ├── src/
+│   │   │   ├── Components/       # Componentes reutilizáveis
+│   │   │   ├── Pages/            # Páginas da aplicação
+│   │   │   ├── App.tsx           # Roteamento principal
+│   │   │   ├── main.tsx          # Entry point do React
+│   │   │   └── index.css         # Estilos globais e tema Tailwind
+│   │   ├── index.html            # HTML base (pt-BR, meta tags, GA4)
+│   │   ├── vite.config.ts        # Configuração do Vite
+│   │   └── tsconfig.json         # Configuração do TypeScript
+│   └── api/                      # Backend Go (em desenvolvimento)
+├── docs/                         # Material de referência (biblioteca.csv, etc)
+├── netlify.toml                  # Configuração de deploy do frontend
+└── package.json                  # Workspace root (npm workspaces)
 ```
 
 ---
@@ -95,8 +89,8 @@ caboclo-tupinamba-frontend/
 
 ## Pré-requisitos
 
-- [Node.js](https://nodejs.org/) v18 ou superior
-- npm (incluído no Node.js) ou outro gerenciador de pacotes
+- [Node.js](https://nodejs.org/) v20.19+ ou v22.12+ (requerido pelo Vite 7)
+- npm (incluído no Node.js)
 
 ---
 
@@ -107,10 +101,10 @@ caboclo-tupinamba-frontend/
 git clone https://github.com/alexandre/caboclo-tupinamba-frontend.git
 cd caboclo-tupinamba-frontend
 
-# 2. Instale as dependências
+# 2. Instale as dependências de todos os workspaces (a partir do root)
 npm install
 
-# 3. Inicie o servidor de desenvolvimento
+# 3. Inicie o servidor de desenvolvimento do frontend
 npm run dev
 ```
 
@@ -120,12 +114,14 @@ O app estará disponível em **http://localhost:3000**.
 
 ## Scripts Disponíveis
 
+Todos os scripts são executados a partir do **root** do monorepo e delegam para o workspace `@caboclo/web`.
+
 | Comando | Descrição |
 |---|---|
-| `npm run dev` | Inicia o servidor de desenvolvimento na porta 3000 |
-| `npm run build` | Gera o build de produção em `/dist` |
+| `npm run dev` | Inicia o servidor de desenvolvimento do frontend na porta 3000 |
+| `npm run build` | Gera o build de produção em `apps/web/dist/` |
 | `npm run preview` | Visualiza o build de produção localmente |
-| `npm run lint` | Executa o ESLint no projeto |
+| `npm run lint` | Executa o ESLint no frontend |
 
 ---
 
@@ -177,37 +173,31 @@ The website provides:
 
 ## Project Structure
 
+This repo is a **monorepo** managed with **npm workspaces**.
+
 ```
-caboclo-tupinamba-frontend/
-├── public/                   # Static assets and data
-│   ├── giras.ts              # Spiritual sessions dataset
-│   ├── biblioteca.ts         # Library books dataset
-│   ├── _headers              # Netlify headers config
-│   ├── robots.txt            # SEO crawler rules
-│   └── *.avif / *.svg        # Images and logos
-├── src/
-│   ├── Components/           # Reusable components
-│   │   ├── Header.tsx        # Responsive navigation bar
-│   │   ├── Footer.tsx        # Footer with location & contact
-│   │   ├── Hero.tsx          # Hero section (next upcoming event)
-│   │   ├── Agenda.tsx        # Events listing
-│   │   ├── Calendario.tsx    # Interactive calendar
-│   │   ├── Orixas.tsx        # Orixás component
-│   │   ├── Exus.tsx          # Exus component
-│   │   ├── Caboclos.tsx      # Caboclos component
-│   │   └── ...               # Other UI components
-│   ├── Pages/                # Page-level components
-│   │   ├── Home.tsx
-│   │   ├── OCentro.tsx
-│   │   ├── HistoriaDaUmbanda.tsx
-│   │   ├── Biblioteca.tsx
-│   │   └── Entidades.tsx
-│   ├── App.tsx               # App routing
-│   ├── main.tsx              # React entry point
-│   └── index.css             # Global styles & Tailwind theme
-├── index.html                # HTML shell (pt-BR, meta, GA4)
-├── vite.config.ts            # Vite configuration
-└── tsconfig.json             # TypeScript configuration
+caboclo-tupinamba/
+├── apps/
+│   ├── web/                      # React + Vite frontend (this app)
+│   │   ├── public/               # Static assets & data
+│   │   │   ├── giras.ts          # Spiritual sessions dataset
+│   │   │   ├── biblioteca.ts     # Library books dataset
+│   │   │   ├── _headers          # Netlify headers config
+│   │   │   ├── robots.txt        # SEO crawler rules
+│   │   │   └── *.avif / *.svg    # Images & logos
+│   │   ├── src/
+│   │   │   ├── Components/       # Reusable components
+│   │   │   ├── Pages/            # Page-level components
+│   │   │   ├── App.tsx           # App routing
+│   │   │   ├── main.tsx          # React entry point
+│   │   │   └── index.css         # Global styles & Tailwind theme
+│   │   ├── index.html            # HTML shell (pt-BR, meta, GA4)
+│   │   ├── vite.config.ts        # Vite configuration
+│   │   └── tsconfig.json         # TypeScript configuration
+│   └── api/                      # Go backend (work in progress)
+├── docs/                         # Reference material (biblioteca.csv, etc)
+├── netlify.toml                  # Frontend deploy config
+└── package.json                  # Workspace root (npm workspaces)
 ```
 
 ---
@@ -226,8 +216,8 @@ caboclo-tupinamba-frontend/
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) v18 or higher
-- npm (bundled with Node.js) or any other package manager
+- [Node.js](https://nodejs.org/) v20.19+ or v22.12+ (required by Vite 7)
+- npm (bundled with Node.js)
 
 ---
 
@@ -251,12 +241,14 @@ The app will be available at **http://localhost:3000**.
 
 ## Available Scripts
 
+All scripts run from the **root** of the monorepo and delegate to the `@caboclo/web` workspace.
+
 | Command | Description |
 |---|---|
-| `npm run dev` | Start dev server on port 3000 |
-| `npm run build` | Generate production build in `/dist` |
+| `npm run dev` | Start the frontend dev server on port 3000 |
+| `npm run build` | Generate production build in `apps/web/dist/` |
 | `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint |
+| `npm run lint` | Run ESLint on the frontend |
 
 ---
 

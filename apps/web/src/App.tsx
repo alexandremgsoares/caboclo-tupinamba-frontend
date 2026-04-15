@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./Pages/Home";
 import HistoriaDaUmbanda from "./Pages/HistoriaDaUmbanda";
 // import PontosEOracoes from "./Pages/PontosEOracoes";
-// import Entidades from "./Pages/Entidades";
+import Entidades from "./Pages/Entidades";
 // import Orixas from "./Components/Orixas";
 // import Exus from "./Components/Exus";
 // import Caboclos from "./Components/Caboclos";
@@ -24,7 +24,7 @@ function App() {
             <Route path="exus" element={<Exus />} />
             <Route path="caboclos" element={<Caboclos />} />
           </Route> */}
-          {/* <Route path="entidades" element={<Entidades />} /> */}
+          <Route path="entidades" element={<Entidades />} />
         </Routes>
       </BrowserRouter>
     </div>

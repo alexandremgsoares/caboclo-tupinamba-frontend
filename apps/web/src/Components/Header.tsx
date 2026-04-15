@@ -52,12 +52,12 @@ function Header() {
                   <NavLink to="/pontos" onClick={() => setIsMenuOpen(false)}>
                     Pontos
                   </NavLink>
-                </li>
+                </li> */}
                 <li className="border rounded-lg py-2 px-4">
                   <NavLink to="/entidades" onClick={() => setIsMenuOpen(false)}>
                     Entidades
                   </NavLink>
-                </li> */}
+                </li>
                 <li className="border rounded-lg py-2 px-4">
                   <NavLink
                     to="/biblioteca"
@@ -82,10 +82,10 @@ function Header() {
               </li>
               {/* <li>
                 <NavLink to="/pontos">Pontos</NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink to="/entidades">Entidades</NavLink>
-              </li> */}
+              </li>
               <li>
                 <NavLink to="/biblioteca">Biblioteca</NavLink>
               </li>

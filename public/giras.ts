@@ -406,7 +406,7 @@ export const giras: Array<Gira> = [
     month: "Abril",
     year: 2026,
     monthIndex: 4,
-    exibirNoHero: true,
+    exibirNoHero: false,
   },
   {
     titulo: "Desenvolvimento",
